@@ -1,0 +1,34 @@
+{
+    "name": "onend/paypal-sdk-php",
+    "type": "library",
+    "description": "PayPal REST API PHP client",
+    "keywords": ["rest", "paypal", "php", "client"],
+    "homepage": "http://1nd.hu/",
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Hoffmann András",
+            "email": "hoffmann.andras@1nd.hu",
+            "homepage": "https://github.com/NiGGa"
+        },
+        {
+            "name": "Martin Miklós",
+            "email": "martin.miklos@1nd.hu",
+            "homepage": "https://github.com/miklos-martin"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.5",
+        "ext-curl": "*",
+        "guzzle/guzzle": "~3.7"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "Onend": "src/",
+            "Onend\\Tests": "tests/"
+        }
+    }
+}
