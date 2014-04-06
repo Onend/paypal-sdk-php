@@ -134,7 +134,7 @@ abstract class AbstractClient extends Client
     private function checkAndSetAccessTokenInstance()
     {
         if ( ! $this->accessToken instanceof AccessTokenInterface ) {
-            $this->accessToken = new AccessToken();
+            $this->setAccessToken( new AccessToken() );
         }
     }
 }

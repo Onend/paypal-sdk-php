@@ -24,7 +24,9 @@ abstract class AbstractModel
             } else if ( is_array( $v ) ) {
                 $ret[$k] = $this->convertToArray( $v );
             } else {
-                $ret[$k] = $v;
+                if ( $v !== null) {
+                    $ret[$k] = $v;
+                }
             }
         }
 
