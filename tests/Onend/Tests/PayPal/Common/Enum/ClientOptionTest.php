@@ -11,7 +11,7 @@ class ClientOptionTest extends \PHPUnit_Framework_TestCase
         $values = [
             "CLIENT_ID" => "client_id",
             "SECRET" => "secret",
-            "ACCESS_TOKEN" => "auth_token"
+            "ACCESS_TOKEN" => "access_token"
         ];
 
         $this->assertEquals( $values, ClientOption::values());
@@ -30,7 +30,7 @@ class ClientOptionTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage The value "undefined_value" not exist in enum (Onend\PayPal\Common\Enum\ClientOption)
+     * @expectedExceptionMessage The value [undefined_value] not exists in enum [Onend\PayPal\Common\Enum\ClientOption]
      */
     public function testCheckValue()
     {

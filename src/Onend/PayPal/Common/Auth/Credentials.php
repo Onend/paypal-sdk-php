@@ -1,6 +1,6 @@
 <?php
 
-namespace Onend\PayPal\Common\Credentials;
+namespace Onend\PayPal\Common\Auth;
 
 class Credentials {
 

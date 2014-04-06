@@ -2,7 +2,7 @@
 
 namespace Onend\PayPal\Payment\Model;
 
-class BillingAddress extends AbstractAddress
+class ShippingAddress extends AbstractAddress
 {
 
 }

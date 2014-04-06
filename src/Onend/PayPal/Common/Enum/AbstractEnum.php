@@ -51,7 +51,7 @@ abstract class AbstractEnum
     {
         if ( !static::hasValue( $value ) ) {
             throw new \InvalidArgumentException(
-                sprintf( 'The value "%s" not exist in enum (%s)', $value, get_called_class() )
+                sprintf( 'The value [%s] not exists in enum [%s]', $value, get_called_class() )
             );
         }
     }

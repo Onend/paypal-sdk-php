@@ -1,8 +1,6 @@
 <?php
 
-namespace Onend\PayPal\Payment\Enum;
-
-use Onend\PayPal\Common\Enum\AbstractEnum;
+namespace Onend\PayPal\Common\Enum;
 
 class Intent extends AbstractEnum
 {
