@@ -1,6 +1,6 @@
 <?php
 
-namespace Onend\PayPal\Common\Factory;
+namespace Onend\PayPal\Common\Factory\Response;
 
 
 use Onend\PayPal\Common\Model\AbstractModel;
@@ -18,16 +18,18 @@ abstract class AbstractResponseFactory
     public function factory( array $response )
     {
         $map = $this->getFactoryMap();
+        $model = $this->getResponseObject();
+
         foreach ( $response as $k => $v ) {
 
-            if ( array_key_exists( $k, $map ) ) {
+            if ( ! array_key_exists( $k, $map ) ) {
 
             } else {
 
             }
         }
 
-        return $this->getResponseObject();
+        return $model;
     }
 
     /**

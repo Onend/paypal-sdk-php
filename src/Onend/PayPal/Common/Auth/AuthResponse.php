@@ -4,7 +4,7 @@ namespace Onend\PayPal\Common\Auth;
 
 class AuthResponse
 {
-    protected $scope = [ ];
+    protected $scope = [ ]; // todo ez nem tömb így, tömbbé kell alakítani
 
     protected $access_token;
 
