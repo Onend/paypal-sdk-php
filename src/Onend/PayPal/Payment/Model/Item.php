@@ -2,31 +2,43 @@
 
 namespace Onend\PayPal\Payment\Model;
 
+use JMS\Serializer\Annotation as JMS;
+
 use Onend\PayPal\Common\Model\AbstractModel;
 
 class Item extends AbstractModel
 {
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $quantity;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $name;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $price;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $currency;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $sku;

@@ -2,7 +2,7 @@
 
 namespace Onend\PayPal\Common\Client;
 
-use Guzzle\Service\Client;
+use Guzzle\Http\Client;
 use Guzzle\Http\Message\RequestInterface;
 
 use Onend\PayPal\Common\Auth\AccessTokenInterface;

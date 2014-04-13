@@ -22,7 +22,8 @@
     "require": {
         "php": ">=5.4",
         "ext-curl": "*",
-        "guzzle/guzzle": "~3.7"
+        "guzzle/guzzle": "~3.7",
+        "jms/serializer": "0.16.0"
     },
 
     "require-dev": {

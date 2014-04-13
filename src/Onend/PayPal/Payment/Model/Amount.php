@@ -2,21 +2,29 @@
 
 namespace Onend\PayPal\Payment\Model;
 
+use JMS\Serializer\Annotation as JMS;
+
 use Onend\PayPal\Common\Model\AbstractModel;
 
 class Amount extends AbstractModel
 {
     /**
+     * @JMS\Type("float")
+     *
      * @var float
      */
     protected $total;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $currency;
 
     /**
+     * @JMS\Type("Onend\PayPal\Payment\Model\AmountDetails")
+     *
      * @var AmountDetails
      */
     protected $details;

@@ -2,16 +2,22 @@
 
 namespace Onend\PayPal\Payment\Model;
 
+use JMS\Serializer\Annotation as JMS;
+
 use Onend\PayPal\Common\Model\AbstractModel;
 
 class FundingInstrument extends AbstractModel
 {
     /**
+     * @JMS\Type("Onend\PayPal\Payment\Model\CreditCard")
+     *
      * @var CreditCard
      */
     protected $credit_card;
 
     /**
+     * @JMS\Type("Onend\PayPal\Payment\Model\CreditCardToken")
+     *
      * @var CreditCardToken
      */
     protected $credit_card_token;

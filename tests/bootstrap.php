@@ -1,12 +1,14 @@
 <?php
 
-error_reporting( E_ALL | E_STRICT );
+use Doctrine\Common\Annotations\AnnotationRegistry;
 
-$autoload = dirname( __DIR__ ) . '/vendor/autoload.php';
+call_user_func(function() {
 
-if ( ! is_file( $autoload ) ) {
-    throw new Exception( "Run composer install motherfucker!" );
-}
+    if ( ! is_file($autoloadFile = __DIR__.'/../vendor/autoload.php')) {
+        throw new \RuntimeException('Did not find vendor/autoload.php. Did you run "composer install --dev"?');
+    }
 
-require $autoload;
+    $loader = require $autoloadFile;
 
+    AnnotationRegistry::registerLoader('class_exists');
+});

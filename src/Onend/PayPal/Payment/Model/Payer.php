@@ -2,22 +2,30 @@
 
 namespace Onend\PayPal\Payment\Model;
 
+use JMS\Serializer\Annotation as JMS;
+
 use Onend\PayPal\Common\Model\AbstractModel;
 use Onend\PayPal\Payment\Enum\PaymentMethod;
 
 class Payer extends AbstractModel
 {
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $payment_method;
 
     /**
+     * @JMS\Type("array<Onend\PayPal\Payment\Model\FundingInstrument>")
+     *
      * @var FundingInstrument[]
      */
     protected $funding_instruments;
 
     /**
+     * @JMS\Type("Onend\PayPal\Payment\Model\PayerInfo")
+     *
      * @var PayerInfo
      */
     protected $payer_info;

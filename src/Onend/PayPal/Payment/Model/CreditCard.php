@@ -2,61 +2,85 @@
 
 namespace Onend\PayPal\Payment\Model;
 
+use JMS\Serializer\Annotation as JMS;
+
 use Onend\PayPal\Common\Model\AbstractModel;
 
 class CreditCard extends AbstractModel
 {
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $id;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $payer_id;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $number;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $type;
 
     /**
+     * @JMS\Type("integer")
+     *
      * @var int
      */
     protected $expire_month;
 
     /**
+     * @JMS\Type("integer")
+     *
      * @var int
      */
     protected $expire_year;
 
     /**
+     * @JMS\Type("integer")
+     *
      * @var int
      */
     protected $cvv2;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $first_name;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $last_name;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $valid_until;
 
     /**
+     * @JMS\Type("Onend\PayPal\Payment\Model\BillingAddress")
+     *
      * @var BillingAddress
      */
     protected $billing_address;

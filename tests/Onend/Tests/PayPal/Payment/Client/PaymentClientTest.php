@@ -2,7 +2,6 @@
 
 namespace Onend\Tests\PayPal\Payment\Client;
 
-use Guzzle\Http\Message\Response;
 use Guzzle\Tests\GuzzleTestCase;
 
 use Onend\PayPal\Common\Enum\Intent;
@@ -10,7 +9,6 @@ use Onend\PayPal\Payment\Enum\CountryCode;
 use Onend\PayPal\Payment\Enum\CreditCardType;
 use Onend\PayPal\Payment\Enum\PaymentMethod;
 use Onend\PayPal\Payment\Factory\Client\PaymentClientFactory;
-use Onend\PayPal\Payment\Factory\Response\CreateResponseFactory;
 use Onend\PayPal\Payment\Model\Amount;
 use Onend\PayPal\Payment\Model\AmountDetails;
 use Onend\PayPal\Payment\Model\BillingAddress;
@@ -23,20 +21,13 @@ use Onend\Tests\PayPal\Common\Credentials\CredentialsTest;
 
 class PaymentClientTest extends GuzzleTestCase
 {
-    /**
-     * @throws \InvalidArgumentException
-     * @throws
-     * @throws \Exception
-     */
     public function testCreatePayment()
     {
         $client = (new PaymentClientFactory(CredentialsTest::getCredentials()))->factory();
-
         $response = $client->create($this->createNewPayment());
 
-        var_dump($response);
+        $this->assertInstanceOf(Payment::getClass(), $response);
     }
-
 
     /**
      * @throws \InvalidArgumentException

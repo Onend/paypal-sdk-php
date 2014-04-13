@@ -2,42 +2,58 @@
 
 namespace Onend\PayPal\Payment\Model;
 
+use JMS\Serializer\Annotation as JMS;
+
 use Onend\PayPal\Common\Model\AbstractModel;
 use Onend\PayPal\Payment\Enum\CountryCode;
 
 abstract class AbstractAddress extends AbstractModel
 {
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $line1;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $line2;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $city;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $country_code;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $postal_code;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $state;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $phone;
