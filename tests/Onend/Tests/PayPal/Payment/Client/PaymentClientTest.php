@@ -25,11 +25,7 @@ class PaymentClientTest extends GuzzleTestCase
     public function testCreatePayment()
     {
         $client = (new PaymentClientFactory(CredentialsTest::getCredentials()))->factory();
-        $serializer = SerializerBuilder::create()->build();
         $response = $client->create($this->createNewPayment());
-
-        var_dump($response);exit;
-
         $this->assertInstanceOf(Payment::getClass(), $response);
     }
 
