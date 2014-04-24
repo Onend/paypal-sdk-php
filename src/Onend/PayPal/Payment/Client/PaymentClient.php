@@ -10,6 +10,11 @@ use Onend\PayPal\Payment\Model\Payment;
 
 class PaymentClient extends AbstractClient
 {
+    /**
+     * @param Payment $payment
+     *
+     * @return Payment
+     */
     public function create( Payment $payment )
     {
         $request = $this->post( $this->getBaseUrl() . Endpoint::CREATE_PAYMENT, [

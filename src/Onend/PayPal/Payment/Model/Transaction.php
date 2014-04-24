@@ -3,6 +3,7 @@
 namespace Onend\PayPal\Payment\Model;
 
 use JMS\Serializer\Annotation as JMS;
+use JMS\Serializer\JsonDeserializationVisitor;
 
 use Onend\PayPal\Common\Model\AbstractModel;
 
@@ -30,10 +31,9 @@ class Transaction extends AbstractModel
     protected $item_list;
 
     /**
-     * @JMS\Exclude
-     * todo related_resources "array of sale, authorization, capture, or refund, objects"
+     * @JMS\Type("array<Onend\PayPal\Payment\Model\RelatedResources>")
      *
-     * @var array
+     * @var AbstractRelatedResource[]
      */
     protected $related_resources;
 
@@ -67,5 +67,37 @@ class Transaction extends AbstractModel
     public function setDescription( $description )
     {
         $this->description = $description;
+    }
+
+    /**
+     * @param \Onend\PayPal\Payment\Model\ItemList $item_list
+     */
+    public function setItemList( \Onend\PayPal\Payment\Model\ItemList $item_list )
+    {
+        $this->item_list = $item_list;
+    }
+
+    /**
+     * @return \Onend\PayPal\Payment\Model\ItemList
+     */
+    public function getItemList()
+    {
+        return $this->item_list;
+    }
+
+    /**
+     * @param AbstractRelatedResource[] $related_resources
+     */
+    public function setRelatedResources( array $related_resources )
+    {
+        $this->related_resources = $related_resources;
+    }
+
+    /**
+     * @return AbstractRelatedResource[]
+     */
+    public function getRelatedResources()
+    {
+        return $this->related_resources;
     }
 }

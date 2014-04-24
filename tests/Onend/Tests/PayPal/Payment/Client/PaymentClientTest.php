@@ -4,6 +4,7 @@ namespace Onend\Tests\PayPal\Payment\Client;
 
 use Guzzle\Tests\GuzzleTestCase;
 
+use JMS\Serializer\SerializerBuilder;
 use Onend\PayPal\Common\Enum\Intent;
 use Onend\PayPal\Payment\Enum\CountryCode;
 use Onend\PayPal\Payment\Enum\CreditCardType;
@@ -24,7 +25,10 @@ class PaymentClientTest extends GuzzleTestCase
     public function testCreatePayment()
     {
         $client = (new PaymentClientFactory(CredentialsTest::getCredentials()))->factory();
+        $serializer = SerializerBuilder::create()->build();
         $response = $client->create($this->createNewPayment());
+
+        var_dump($response);exit;
 
         $this->assertInstanceOf(Payment::getClass(), $response);
     }
