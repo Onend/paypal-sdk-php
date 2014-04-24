@@ -5,6 +5,7 @@ namespace Onend\PayPal\Common\Client;
 use Guzzle\Http\Client;
 use Guzzle\Http\Message\RequestInterface;
 
+use JMS\Serializer\SerializerBuilder;
 use Onend\PayPal\Common\Auth\AccessTokenInterface;
 use Onend\PayPal\Common\Auth\DefaultAccessTokenProvider;
 
@@ -24,6 +25,14 @@ abstract class AbstractClient extends Client
     }
 
     /**
+     * @return \JMS\Serializer\Serializer
+     */
+    protected function getSerializer()
+    {
+        return SerializerBuilder::create()->build();
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function send( $requests )
@@ -35,12 +44,14 @@ abstract class AbstractClient extends Client
             /** @var $requests RequestInterface[] */
             foreach ( $requests as &$request ) {
                 $this->addTokenHeader( $request, $accessToken );
+                $this->addJsonContentTypeHeader($request);
             }
 
             return $this->sendMultiple( $requests );
         }
 
         $this->addTokenHeader( $requests, $accessToken );
+        $this->addJsonContentTypeHeader($requests);
 
         return parent::send( $requests );
     }
@@ -48,10 +59,21 @@ abstract class AbstractClient extends Client
     /**
      * @param RequestInterface $request
      * @param AccessTokenInterface $accessToken
+     *
      * @return \Guzzle\Http\Message\MessageInterface
      */
     private function addTokenHeader( RequestInterface $request, AccessTokenInterface $accessToken )
     {
         return $request->addHeader( 'Authorization', $accessToken->getTokenType() . ' ' . $accessToken->getToken() );
+    }
+
+    /**
+     * @param RequestInterface $request
+     *
+     * @return \Guzzle\Http\Message\MessageInterface
+     */
+    protected function addJsonContentTypeHeader( RequestInterface $request )
+    {
+        return $request->addHeader('Content-Type', 'application/json');
     }
 }
