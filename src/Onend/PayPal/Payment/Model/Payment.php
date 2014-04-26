@@ -168,7 +168,7 @@ class Payment extends AbstractModel
     }
 
     /**
-     * @return array
+     * @return RedirectUrl
      */
     public function getRedirectUrls()
     {
@@ -176,11 +176,10 @@ class Payment extends AbstractModel
     }
 
     /**
-     * @param array $redirect_urls
+     * @param RedirectUrl $redirect_url
      */
-    public function setRedirectUrls( array $redirect_urls )
+    public function setRedirectUrls( RedirectUrl $redirect_url )
     {
-        $this->redirect_urls = $redirect_urls;
+        $this->redirect_urls = $redirect_url;
     }
-
 }
