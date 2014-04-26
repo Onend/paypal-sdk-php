@@ -2,36 +2,50 @@
 
 namespace Onend\PayPal\Payment\Model;
 
+use JMS\Serializer\Annotation as JMS;
+
 use Onend\PayPal\Common\Model\AbstractModel;
 
 class PayerInfo extends AbstractModel
 {
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $email;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $first_name;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $last_name;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $payer_id;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $phone;
 
     /**
+     * @JMS\Type("Onend\PayPal\Payment\Model\ShippingAddress")
+     *
      * @var ShippingAddress
      */
     protected $shipping_address;
