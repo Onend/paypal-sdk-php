@@ -35,5 +35,11 @@
             "Onend": "src/",
             "Onend\\Tests": "tests/"
         }
+    },
+
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.5.x-dev"
+        }
     }
 }
