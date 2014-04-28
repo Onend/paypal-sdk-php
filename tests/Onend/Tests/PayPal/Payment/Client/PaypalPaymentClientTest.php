@@ -13,7 +13,7 @@ class PaypalPaymentClientTest extends AbstractPaymentClientTest
     protected function createNewPayer()
     {
         $payer = new Payer();
-        $payer->setPaymentMethod( PaymentMethod::PAYPAL );
+        $payer->setPaymentMethod(PaymentMethod::PAYPAL);
 
         return $payer;
     }
@@ -24,7 +24,7 @@ class PaypalPaymentClientTest extends AbstractPaymentClientTest
     protected function createNewPayment()
     {
         $createNewPayment = parent::createNewPayment();
-        $createNewPayment->setRedirectUrls( $this->createNewRedirectUrl() );
+        $createNewPayment->setRedirectUrls($this->createNewRedirectUrl());
 
         return $createNewPayment;
     }

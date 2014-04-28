@@ -53,7 +53,7 @@ class PayerInfo extends AbstractModel
     /**
      * @param string $email
      */
-    public function setEmail( $email )
+    public function setEmail($email)
     {
         $this->email = $email;
     }
@@ -69,7 +69,7 @@ class PayerInfo extends AbstractModel
     /**
      * @param string $first_name
      */
-    public function setFirstName( $first_name )
+    public function setFirstName($first_name)
     {
         $this->first_name = $first_name;
     }
@@ -85,7 +85,7 @@ class PayerInfo extends AbstractModel
     /**
      * @param string $last_name
      */
-    public function setLastName( $last_name )
+    public function setLastName($last_name)
     {
         $this->last_name = $last_name;
     }
@@ -101,7 +101,7 @@ class PayerInfo extends AbstractModel
     /**
      * @param string $payer_id
      */
-    public function setPayerId( $payer_id )
+    public function setPayerId($payer_id)
     {
         $this->payer_id = $payer_id;
     }
@@ -117,7 +117,7 @@ class PayerInfo extends AbstractModel
     /**
      * @param string $phone
      */
-    public function setPhone( $phone )
+    public function setPhone($phone)
     {
         $this->phone = $phone;
     }
@@ -133,7 +133,7 @@ class PayerInfo extends AbstractModel
     /**
      * @param ShippingAddress $shipping_address
      */
-    public function setShippingAddress( ShippingAddress $shipping_address )
+    public function setShippingAddress(ShippingAddress $shipping_address)
     {
         $this->shipping_address = $shipping_address;
     }

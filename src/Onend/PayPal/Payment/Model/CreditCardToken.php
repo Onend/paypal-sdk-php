@@ -47,7 +47,7 @@ class CreditCardToken extends AbstractModel
     /**
      * @param string $credit_card_id
      */
-    public function setCreditCardId( $credit_card_id )
+    public function setCreditCardId($credit_card_id)
     {
         $this->credit_card_id = $credit_card_id;
     }
@@ -63,7 +63,7 @@ class CreditCardToken extends AbstractModel
     /**
      * @param int $expire_month
      */
-    public function setExpireMonth( $expire_month )
+    public function setExpireMonth($expire_month)
     {
         $this->expire_month = $expire_month;
     }
@@ -79,7 +79,7 @@ class CreditCardToken extends AbstractModel
     /**
      * @param int $expire_year
      */
-    public function setExpireYear( $expire_year )
+    public function setExpireYear($expire_year)
     {
         $this->expire_year = $expire_year;
     }
@@ -95,7 +95,7 @@ class CreditCardToken extends AbstractModel
     /**
      * @param string $last4
      */
-    public function setLast4( $last4 )
+    public function setLast4($last4)
     {
         $this->last4 = $last4;
     }
@@ -111,7 +111,7 @@ class CreditCardToken extends AbstractModel
     /**
      * @param string $payer_id
      */
-    public function setPayerId( $payer_id )
+    public function setPayerId($payer_id)
     {
         $this->payer_id = $payer_id;
     }
@@ -127,7 +127,7 @@ class CreditCardToken extends AbstractModel
     /**
      * @param string $type
      */
-    public function setType( $type )
+    public function setType($type)
     {
         $this->type = $type;
     }

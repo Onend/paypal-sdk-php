@@ -2,7 +2,8 @@
 
 namespace Onend\PayPal\Common\Auth;
 
-interface AccessTokenProviderInterface {
+interface AccessTokenProviderInterface
+{
 
     /**
      * @return AccessTokenInterface
@@ -13,5 +14,5 @@ interface AccessTokenProviderInterface {
      * @param AccessTokenInterface $accessToken
      * @return void
      */
-    public function setAccessToken( AccessTokenInterface $accessToken );
+    public function setAccessToken(AccessTokenInterface $accessToken);
 }

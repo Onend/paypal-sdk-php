@@ -7,14 +7,14 @@ abstract class AbstractEnum
     /**
      * @var array
      */
-    protected static $cache = [ ];
+    protected static $cache = [];
 
     /**
      * @return array
      */
     public static function keys()
     {
-        return array_keys( static::values() );
+        return array_keys(static::values());
     }
 
     /**
@@ -24,8 +24,8 @@ abstract class AbstractEnum
     {
         $class = get_called_class();
 
-        if ( !isset( self::$cache[$class] ) ) {
-            $reflected = new \ReflectionClass( $class );
+        if (!isset(self::$cache[$class])) {
+            $reflected = new \ReflectionClass($class);
             self::$cache[$class] = $reflected->getConstants();
         }
 
@@ -37,9 +37,9 @@ abstract class AbstractEnum
      *
      * @return bool
      */
-    public static function hasValue( $value )
+    public static function hasValue($value)
     {
-        return in_array( $value, static::values() );
+        return in_array($value, static::values());
     }
 
     /**
@@ -47,11 +47,11 @@ abstract class AbstractEnum
      *
      * @param string $value
      */
-    public static function checkValue( $value )
+    public static function checkValue($value)
     {
-        if ( !static::hasValue( $value ) ) {
+        if (!static::hasValue($value)) {
             throw new \InvalidArgumentException(
-                sprintf( 'The value [%s] not exists in enum [%s]', $value, get_called_class() )
+                sprintf('The value [%s] not exists in enum [%s]', $value, get_called_class())
             );
         }
     }

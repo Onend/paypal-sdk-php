@@ -29,18 +29,18 @@ abstract class AbstractPaymentClientTest extends GuzzleTestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->client = ( new PaymentClientFactory( CredentialsTest::getCredentials() ) )->factory();
-        $this->payment = $this->client->createPayment( $this->createNewPayment() );
+        $this->client = (new PaymentClientFactory(CredentialsTest::getCredentials()))->factory();
+        $this->payment = $this->client->createPayment($this->createNewPayment());
     }
 
     public function testCreatePayment()
     {
-        $this->assertInstanceOf( Payment::getClass(), $this->payment );
+        $this->assertInstanceOf(Payment::getClass(), $this->payment);
     }
 
     public function testLookupPayment()
     {
-        $this->assertInstanceOf( Payment::getClass(), $this->client->lookupPayment( $this->payment ) );
+        $this->assertInstanceOf(Payment::getClass(), $this->client->lookupPayment($this->payment));
     }
 
     /**
@@ -50,9 +50,9 @@ abstract class AbstractPaymentClientTest extends GuzzleTestCase
     protected function createNewPayment()
     {
         $payment = new Payment();
-        $payment->setIntent( Intent::SALE );
-        $payment->setPayer( $this->createNewPayer() );
-        $payment->addTransaction( $this->createNewTransaction() );
+        $payment->setIntent(Intent::SALE);
+        $payment->setPayer($this->createNewPayer());
+        $payment->addTransaction($this->createNewTransaction());
 
         return $payment;
     }
@@ -64,8 +64,8 @@ abstract class AbstractPaymentClientTest extends GuzzleTestCase
     {
         $transaction = new Transaction();
 
-        $transaction->setAmount( $this->createNewAmount() );
-        $transaction->setDescription( "This is the payment transaction description." );
+        $transaction->setAmount($this->createNewAmount());
+        $transaction->setDescription("This is the payment transaction description.");
 
         return $transaction;
     }
@@ -77,9 +77,9 @@ abstract class AbstractPaymentClientTest extends GuzzleTestCase
     {
         $amount = new Amount();
 
-        $amount->setTotal( "7.47" );
-        $amount->setCurrency( "USD" );
-        $amount->setDetails( $this->createNewAmountDetails() );
+        $amount->setTotal("7.47");
+        $amount->setCurrency("USD");
+        $amount->setDetails($this->createNewAmountDetails());
 
         return $amount;
     }
@@ -91,9 +91,9 @@ abstract class AbstractPaymentClientTest extends GuzzleTestCase
     {
         $details = new AmountDetails();
 
-        $details->setTax( "0.03" );
-        $details->setSubtotal( "7.41" );
-        $details->setShipping( "0.03" );
+        $details->setTax("0.03");
+        $details->setSubtotal("7.41");
+        $details->setShipping("0.03");
 
         return $details;
     }

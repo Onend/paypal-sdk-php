@@ -32,7 +32,7 @@ class Link extends AbstractModel
     /**
      * @param string $href
      */
-    public function setHref( $href )
+    public function setHref($href)
     {
         $this->href = $href;
     }
@@ -48,7 +48,7 @@ class Link extends AbstractModel
     /**
      * @param string $method
      */
-    public function setMethod( $method )
+    public function setMethod($method)
     {
         $this->method = $method;
     }
@@ -64,7 +64,7 @@ class Link extends AbstractModel
     /**
      * @param string $rel
      */
-    public function setRel( $rel )
+    public function setRel($rel)
     {
         $this->rel = $rel;
     }

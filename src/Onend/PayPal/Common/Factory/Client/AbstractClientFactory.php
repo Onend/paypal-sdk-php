@@ -29,21 +29,21 @@ abstract class AbstractClientFactory implements ClientFactoryInterface
      * @param Credentials $credentials
      * @param string $baseUrl
      */
-    public function __construct( Credentials $credentials, $baseUrl = ApiBaseUrl::SANDBOX )
+    public function __construct(Credentials $credentials, $baseUrl = ApiBaseUrl::SANDBOX)
     {
         $this->baseUrl = $baseUrl;
         $this->credentials = $credentials;
-        $authClient = new AuthClient( $baseUrl );
-        $authClient->setCredentials( $credentials );
+        $authClient = new AuthClient($baseUrl);
+        $authClient->setCredentials($credentials);
         $this->accessTokenProvider = new DefaultAccessTokenProvider();
-        $this->accessTokenProvider->setAuthClient( $authClient );
+        $this->accessTokenProvider->setAuthClient($authClient);
     }
 
     /**
      * @param AccessTokenProviderInterface $accessTokenProvider
      */
-    public function setAccessTokenProvider( AccessTokenProviderInterface $accessTokenProvider )
+    public function setAccessTokenProvider(AccessTokenProviderInterface $accessTokenProvider)
     {
-        $this->accessTokenProvider->setProvider( $accessTokenProvider );
+        $this->accessTokenProvider->setProvider($accessTokenProvider);
     }
 }

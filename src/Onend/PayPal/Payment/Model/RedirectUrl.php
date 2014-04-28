@@ -27,7 +27,7 @@ class RedirectUrl extends AbstractModel
     /**
      * @param string $cancel_url
      */
-    public function setCancelUrl( $cancel_url )
+    public function setCancelUrl($cancel_url)
     {
         $this->cancel_url = $cancel_url;
     }
@@ -43,7 +43,7 @@ class RedirectUrl extends AbstractModel
     /**
      * @param string $return_url
      */
-    public function setReturnUrl( $return_url )
+    public function setReturnUrl($return_url)
     {
         $this->return_url = $return_url;
     }

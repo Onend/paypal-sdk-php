@@ -50,7 +50,7 @@ class RelatedResources extends AbstractModel
     /**
      * @param AbstractRelatedResource $resource
      */
-    public function setResource( AbstractRelatedResource $resource )
+    public function setResource(AbstractRelatedResource $resource)
     {
         $this->resource = $resource;
     }

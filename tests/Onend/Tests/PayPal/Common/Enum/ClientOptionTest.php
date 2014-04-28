@@ -14,7 +14,7 @@ class ClientOptionTest extends \PHPUnit_Framework_TestCase
             "ACCESS_TOKEN" => "access_token"
         ];
 
-        $this->assertEquals( $values, ClientOption::values());
+        $this->assertEquals($values, ClientOption::values());
     }
 
     public function testKeys()
@@ -25,7 +25,7 @@ class ClientOptionTest extends \PHPUnit_Framework_TestCase
             "ACCESS_TOKEN"
         ];
 
-        $this->assertEquals( $values, ClientOption::keys() );
+        $this->assertEquals($values, ClientOption::keys());
     }
 
     /**

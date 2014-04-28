@@ -13,7 +13,7 @@ class ApiBaseUrlTest extends \PHPUnit_Framework_TestCase
             "SANDBOX" => "https://api.sandbox.paypal.com/"
         ];
 
-        $this->assertEquals( $values, ApiBaseUrl::values());
+        $this->assertEquals($values, ApiBaseUrl::values());
     }
 
     public function testKeys()
@@ -23,7 +23,7 @@ class ApiBaseUrlTest extends \PHPUnit_Framework_TestCase
             "SANDBOX",
         ];
 
-        $this->assertEquals( $values, ApiBaseUrl::keys() );
+        $this->assertEquals($values, ApiBaseUrl::keys());
     }
 
     /**

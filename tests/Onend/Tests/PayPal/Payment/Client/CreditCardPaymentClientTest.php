@@ -26,7 +26,7 @@ class CreditCardPaymentClientTest extends AbstractPaymentClientTest
     {
         $payer = new Payer();
 
-        $payer->addFundingInstrument( $this->createNewFundingInstrument() );
+        $payer->addFundingInstrument($this->createNewFundingInstrument());
         $payer->setPaymentMethod(PaymentMethod::CREDIT_CARD);
 
         return $payer;
@@ -39,7 +39,7 @@ class CreditCardPaymentClientTest extends AbstractPaymentClientTest
     {
         $fundingInstrument = new FundingInstrument();
 
-        $fundingInstrument->setCreditCard( $this->createNewCreditCard() );
+        $fundingInstrument->setCreditCard($this->createNewCreditCard());
 
         return $fundingInstrument;
     }
@@ -52,14 +52,14 @@ class CreditCardPaymentClientTest extends AbstractPaymentClientTest
     {
         $creditCard = new CreditCard();
 
-        $creditCard->setBillingAddress( $this->createNewBillingAddress() );
-        $creditCard->setNumber( "4417119669820331" );
-        $creditCard->setType( CreditCardType::VISA );
-        $creditCard->setExpireMonth( 11 );
-        $creditCard->setExpireYear( 2018 );
-        $creditCard->setCvv2( 874 );
-        $creditCard->setFirstName( "Betsy" );
-        $creditCard->setLastName( "Buyer" );
+        $creditCard->setBillingAddress($this->createNewBillingAddress());
+        $creditCard->setNumber("4417119669820331");
+        $creditCard->setType(CreditCardType::VISA);
+        $creditCard->setExpireMonth(11);
+        $creditCard->setExpireYear(2018);
+        $creditCard->setCvv2(874);
+        $creditCard->setFirstName("Betsy");
+        $creditCard->setLastName("Buyer");
 
         return $creditCard;
     }
@@ -72,11 +72,11 @@ class CreditCardPaymentClientTest extends AbstractPaymentClientTest
     {
         $billingAddress = new BillingAddress();
 
-        $billingAddress->setLine1( "111 First Street" );
-        $billingAddress->setCity( "Saratoga" );
-        $billingAddress->setCountryCode( CountryCode::UNITED_STATES );
-        $billingAddress->setPostalCode( "95070" );
-        $billingAddress->setState( "CA" );
+        $billingAddress->setLine1("111 First Street");
+        $billingAddress->setCity("Saratoga");
+        $billingAddress->setCountryCode(CountryCode::UNITED_STATES);
+        $billingAddress->setPostalCode("95070");
+        $billingAddress->setState("CA");
 
         return $billingAddress;
     }

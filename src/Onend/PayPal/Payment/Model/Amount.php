@@ -40,7 +40,7 @@ class Amount extends AbstractModel
     /**
      * @param string $currency
      */
-    public function setCurrency( $currency )
+    public function setCurrency($currency)
     {
         $this->currency = $currency;
     }
@@ -56,7 +56,7 @@ class Amount extends AbstractModel
     /**
      * @param AmountDetails $details
      */
-    public function setDetails( AmountDetails $details )
+    public function setDetails(AmountDetails $details)
     {
         $this->details = $details;
     }
@@ -66,14 +66,14 @@ class Amount extends AbstractModel
      */
     public function getTotal()
     {
-        return (float) $this->total;
+        return (float)$this->total;
     }
 
     /**
      * @param float $total
      */
-    public function setTotal( $total )
+    public function setTotal($total)
     {
-        $this->total = (float) $total;
+        $this->total = (float)$total;
     }
 }

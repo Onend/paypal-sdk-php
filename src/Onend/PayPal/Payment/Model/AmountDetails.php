@@ -34,15 +34,15 @@ class AmountDetails extends AbstractModel
      */
     public function getShipping()
     {
-        return (float) $this->shipping;
+        return (float)$this->shipping;
     }
 
     /**
      * @param float $shipping
      */
-    public function setShipping( $shipping )
+    public function setShipping($shipping)
     {
-        $this->shipping = (float) $shipping;
+        $this->shipping = (float)$shipping;
     }
 
     /**
@@ -50,15 +50,15 @@ class AmountDetails extends AbstractModel
      */
     public function getSubtotal()
     {
-        return (float) $this->subtotal;
+        return (float)$this->subtotal;
     }
 
     /**
      * @param float $subtotal
      */
-    public function setSubtotal( $subtotal )
+    public function setSubtotal($subtotal)
     {
-        $this->subtotal = (float) $subtotal;
+        $this->subtotal = (float)$subtotal;
     }
 
     /**
@@ -66,14 +66,14 @@ class AmountDetails extends AbstractModel
      */
     public function getTax()
     {
-        return (float) $this->tax;
+        return (float)$this->tax;
     }
 
     /**
      * @param float $tax
      */
-    public function setTax( $tax )
+    public function setTax($tax)
     {
-        $this->tax = (float) $tax;
+        $this->tax = (float)$tax;
     }
 }

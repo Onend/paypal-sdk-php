@@ -33,9 +33,9 @@ class ItemList extends AbstractModel
     /**
      * @param Item[] $items
      */
-    public function setItems( array $items )
+    public function setItems(array $items)
     {
-        foreach ( $items as $item ) {
+        foreach ($items as $item) {
             $this->addItem($item);
         }
     }
@@ -43,7 +43,7 @@ class ItemList extends AbstractModel
     /**
      * @param Item $item
      */
-    public function addItem( Item $item )
+    public function addItem(Item $item)
     {
         $this->items[] = $item;
     }
@@ -59,7 +59,7 @@ class ItemList extends AbstractModel
     /**
      * @param ShippingAddress $shipping_address
      */
-    public function setShippingAddress( ShippingAddress $shipping_address )
+    public function setShippingAddress(ShippingAddress $shipping_address)
     {
         $this->shipping_address = $shipping_address;
     }

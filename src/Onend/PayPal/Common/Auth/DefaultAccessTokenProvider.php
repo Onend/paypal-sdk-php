@@ -24,7 +24,7 @@ class DefaultAccessTokenProvider implements AccessTokenProviderInterface
     /**
      * @param AccessTokenProviderInterface $provider
      */
-    public function setProvider( AccessTokenProviderInterface $provider )
+    public function setProvider(AccessTokenProviderInterface $provider)
     {
         $this->provider = $provider;
     }
@@ -32,7 +32,7 @@ class DefaultAccessTokenProvider implements AccessTokenProviderInterface
     /**
      * @param AuthClient $authClient
      */
-    public function setAuthClient( AuthClient $authClient )
+    public function setAuthClient(AuthClient $authClient)
     {
         $this->authClient = $authClient;
     }
@@ -42,10 +42,10 @@ class DefaultAccessTokenProvider implements AccessTokenProviderInterface
      */
     public function getAccessToken()
     {
-        if ( $this->hasProvider() ) {
-            if ( ( $token = $this->provider->getAccessToken() ) !== null ) {
+        if ($this->hasProvider()) {
+            if (($token = $this->provider->getAccessToken()) !== null) {
                 $token = $this->createNewAccessToken();
-                $this->provider->setAccessToken( $token );
+                $this->provider->setAccessToken($token);
             }
         } else {
             $token = $this->createNewAccessToken();
@@ -58,10 +58,10 @@ class DefaultAccessTokenProvider implements AccessTokenProviderInterface
      * @param AccessTokenInterface $accessToken
      * @return void
      */
-    public function setAccessToken( AccessTokenInterface $accessToken )
+    public function setAccessToken(AccessTokenInterface $accessToken)
     {
-        if ( $this->hasProvider() ) {
-            $this->provider->setAccessToken( $accessToken );
+        if ($this->hasProvider()) {
+            $this->provider->setAccessToken($accessToken);
         } else {
             $this->accessToken = $accessToken;
         }

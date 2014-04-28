@@ -2,7 +2,8 @@
 
 namespace Onend\PayPal\Common\Auth;
 
-class Credentials {
+class Credentials
+{
 
     /**
      * @var string
@@ -18,7 +19,7 @@ class Credentials {
      * @param $clientId
      * @param $secret
      */
-    public function __construct( $clientId, $secret )
+    public function __construct($clientId, $secret)
     {
         $this->clientId = $clientId;
         $this->secret = $secret;

@@ -54,7 +54,7 @@ class Item extends AbstractModel
     /**
      * @param string $currency
      */
-    public function setCurrency( $currency )
+    public function setCurrency($currency)
     {
         $this->currency = $currency;
     }
@@ -70,7 +70,7 @@ class Item extends AbstractModel
     /**
      * @param string $name
      */
-    public function setName( $name )
+    public function setName($name)
     {
         $this->name = $name;
     }
@@ -86,7 +86,7 @@ class Item extends AbstractModel
     /**
      * @param string $price
      */
-    public function setPrice( $price )
+    public function setPrice($price)
     {
         $this->price = $price;
     }
@@ -102,7 +102,7 @@ class Item extends AbstractModel
     /**
      * @param string $quantity
      */
-    public function setQuantity( $quantity )
+    public function setQuantity($quantity)
     {
         $this->quantity = $quantity;
     }
@@ -118,7 +118,7 @@ class Item extends AbstractModel
     /**
      * @param string $sku
      */
-    public function setSku( $sku )
+    public function setSku($sku)
     {
         $this->sku = $sku;
     }

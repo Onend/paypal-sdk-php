@@ -12,7 +12,7 @@ class PaymentClientFactory extends AbstractClientFactory
      */
     public function factory()
     {
-        $paymentClient = new PaymentClient( $this->baseUrl );
+        $paymentClient = new PaymentClient($this->baseUrl);
         $paymentClient->setProvider($this->accessTokenProvider);
 
         return $paymentClient;

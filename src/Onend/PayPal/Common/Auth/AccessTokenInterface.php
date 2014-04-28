@@ -16,7 +16,7 @@ interface AccessTokenInterface
      * @param $token
      * @return void
      */
-    public function setToken( $token );
+    public function setToken($token);
 
     /**
      * The type of the token issued as described in OAuth2.0.
@@ -32,7 +32,7 @@ interface AccessTokenInterface
      * @param $tokenType
      * @return void
      */
-    public function setTokenType( $tokenType );
+    public function setTokenType($tokenType);
 
     /**
      * The lifetime in seconds of the access token.
@@ -45,7 +45,7 @@ interface AccessTokenInterface
      * @param int $expiresIn
      * @return void
      */
-    public function setExpiresIn( $expiresIn );
+    public function setExpiresIn($expiresIn);
 
     /**
      * @return bool

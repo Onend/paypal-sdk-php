@@ -58,7 +58,7 @@ class Sale extends AbstractRelatedResource
     /**
      * @param Amount $amount
      */
-    public function setAmount( Amount $amount )
+    public function setAmount(Amount $amount)
     {
         $this->amount = $amount;
     }
@@ -74,7 +74,7 @@ class Sale extends AbstractRelatedResource
     /**
      * @param string $create_time
      */
-    public function setCreateTime( $create_time )
+    public function setCreateTime($create_time)
     {
         $this->create_time = $create_time;
     }
@@ -90,7 +90,7 @@ class Sale extends AbstractRelatedResource
     /**
      * @param string $id
      */
-    public function setId( $id )
+    public function setId($id)
     {
         $this->id = $id;
     }
@@ -106,7 +106,7 @@ class Sale extends AbstractRelatedResource
     /**
      * @param Link[] $links
      */
-    public function setLinks( array $links )
+    public function setLinks(array $links)
     {
         $this->links = $links;
     }
@@ -122,7 +122,7 @@ class Sale extends AbstractRelatedResource
     /**
      * @param string $parent_payment
      */
-    public function setParentPayment( $parent_payment )
+    public function setParentPayment($parent_payment)
     {
         $this->parent_payment = $parent_payment;
     }
@@ -138,7 +138,7 @@ class Sale extends AbstractRelatedResource
     /**
      * @param string $state
      */
-    public function setState( $state )
+    public function setState($state)
     {
         $this->state = $state;
     }
@@ -154,7 +154,7 @@ class Sale extends AbstractRelatedResource
     /**
      * @param string $update_time
      */
-    public function setUpdateTime( $update_time )
+    public function setUpdateTime($update_time)
     {
         $this->update_time = $update_time;
     }

@@ -41,9 +41,9 @@ class Payer extends AbstractModel
     /**
      * @param FundingInstrument[] $funding_instruments
      */
-    public function setFundingInstruments( array $funding_instruments )
+    public function setFundingInstruments(array $funding_instruments)
     {
-        foreach ( $funding_instruments as $funding_instrument ) {
+        foreach ($funding_instruments as $funding_instrument) {
             $this->addFundingInstrument($funding_instrument);
         }
     }
@@ -51,7 +51,7 @@ class Payer extends AbstractModel
     /**
      * @param FundingInstrument $funding_instrument
      */
-    public function addFundingInstrument( FundingInstrument $funding_instrument )
+    public function addFundingInstrument(FundingInstrument $funding_instrument)
     {
         $this->funding_instruments[] = $funding_instrument;
     }
@@ -68,7 +68,7 @@ class Payer extends AbstractModel
      * @param mixed $payment_method
      * @throws \InvalidArgumentException
      */
-    public function setPaymentMethod( $payment_method )
+    public function setPaymentMethod($payment_method)
     {
         PaymentMethod::checkValue($payment_method);
         $this->payment_method = $payment_method;
@@ -85,7 +85,7 @@ class Payer extends AbstractModel
     /**
      * @param PayerInfo $payer_info
      */
-    public function setPayerInfo( PayerInfo $payer_info )
+    public function setPayerInfo(PayerInfo $payer_info)
     {
         $this->payer_info = $payer_info;
     }

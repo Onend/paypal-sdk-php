@@ -69,7 +69,7 @@ abstract class AbstractAddress extends AbstractModel
     /**
      * @param string $city
      */
-    public function setCity( $city )
+    public function setCity($city)
     {
         $this->city = $city;
     }
@@ -86,7 +86,7 @@ abstract class AbstractAddress extends AbstractModel
      * @param string $country_code
      * @throws \InvalidArgumentException
      */
-    public function setCountryCode( $country_code )
+    public function setCountryCode($country_code)
     {
         CountryCode::checkValue($country_code);
         $this->country_code = $country_code;
@@ -103,7 +103,7 @@ abstract class AbstractAddress extends AbstractModel
     /**
      * @param string $line1
      */
-    public function setLine1( $line1 )
+    public function setLine1($line1)
     {
         $this->line1 = $line1;
     }
@@ -119,7 +119,7 @@ abstract class AbstractAddress extends AbstractModel
     /**
      * @param string $line2
      */
-    public function setLine2( $line2 )
+    public function setLine2($line2)
     {
         $this->line2 = $line2;
     }
@@ -135,7 +135,7 @@ abstract class AbstractAddress extends AbstractModel
     /**
      * @param string $phone
      */
-    public function setPhone( $phone )
+    public function setPhone($phone)
     {
         $this->phone = $phone;
     }
@@ -151,7 +151,7 @@ abstract class AbstractAddress extends AbstractModel
     /**
      * @param string $postal_code
      */
-    public function setPostalCode( $postal_code )
+    public function setPostalCode($postal_code)
     {
         $this->postal_code = $postal_code;
     }
@@ -167,7 +167,7 @@ abstract class AbstractAddress extends AbstractModel
     /**
      * @param string $state
      */
-    public function setState( $state )
+    public function setState($state)
     {
         $this->state = $state;
     }

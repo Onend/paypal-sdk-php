@@ -4,7 +4,7 @@ namespace Onend\PayPal\Common\Auth;
 
 class AuthResponse
 {
-    protected $scope = [ ]; // todo ez nem tömb így, tömbbé kell alakítani
+    protected $scope = []; // todo ez nem tömb így, tömbbé kell alakítani
 
     protected $access_token;
 
@@ -17,9 +17,9 @@ class AuthResponse
     /**
      * @param array $response
      */
-    public function __construct( array $response )
+    public function __construct(array $response)
     {
-        foreach ( $response as $k => $v ) {
+        foreach ($response as $k => $v) {
             $this->$k = $v;
         }
     }

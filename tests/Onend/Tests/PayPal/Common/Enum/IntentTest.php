@@ -13,7 +13,7 @@ class IntentTest extends \PHPUnit_Framework_TestCase
             "AUTHORIZE" => "authorize"
         ];
 
-        $this->assertEquals( $values, Intent::values());
+        $this->assertEquals($values, Intent::values());
     }
 
     public function testKeys()
@@ -23,7 +23,7 @@ class IntentTest extends \PHPUnit_Framework_TestCase
             "AUTHORIZE",
         ];
 
-        $this->assertEquals( $values, Intent::keys() );
+        $this->assertEquals($values, Intent::keys());
     }
 
     /**

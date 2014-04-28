@@ -70,7 +70,7 @@ class Payment extends AbstractModel
     /**
      * @param string $id
      */
-    public function setId( $id )
+    public function setId($id)
     {
         $this->id = $id;
     }
@@ -86,7 +86,7 @@ class Payment extends AbstractModel
     /**
      * @param string $create_time
      */
-    public function setCreateTime( $create_time )
+    public function setCreateTime($create_time)
     {
         $this->create_time = $create_time;
     }
@@ -102,11 +102,11 @@ class Payment extends AbstractModel
     /**
      * @param string $update_time
      */
-    public function setUpdateTime( $update_time )
+    public function setUpdateTime($update_time)
     {
         $this->update_time = $update_time;
     }
-    
+
     /**
      * @return string
      */
@@ -119,7 +119,7 @@ class Payment extends AbstractModel
      * @param string $intent
      * @throws \InvalidArgumentException
      */
-    public function setIntent( $intent )
+    public function setIntent($intent)
     {
         Intent::checkValue($intent);
         $this->intent = $intent;
@@ -136,7 +136,7 @@ class Payment extends AbstractModel
     /**
      * @param Payer $payer
      */
-    public function setPayer( Payer $payer )
+    public function setPayer(Payer $payer)
     {
         $this->payer = $payer;
     }
@@ -152,9 +152,9 @@ class Payment extends AbstractModel
     /**
      * @param array $transactions
      */
-    public function setTransactions( array $transactions )
+    public function setTransactions(array $transactions)
     {
-        foreach ( $transactions as $transaction ) {
+        foreach ($transactions as $transaction) {
             $this->addTransaction($transaction);
         }
     }
@@ -162,7 +162,7 @@ class Payment extends AbstractModel
     /**
      * @param Transaction $transaction
      */
-    public function addTransaction( Transaction $transaction )
+    public function addTransaction(Transaction $transaction)
     {
         $this->transactions[] = $transaction;
     }
@@ -178,7 +178,7 @@ class Payment extends AbstractModel
     /**
      * @param RedirectUrl $redirect_url
      */
-    public function setRedirectUrls( RedirectUrl $redirect_url )
+    public function setRedirectUrls(RedirectUrl $redirect_url)
     {
         $this->redirect_urls = $redirect_url;
     }

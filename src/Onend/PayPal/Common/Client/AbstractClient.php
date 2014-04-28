@@ -19,7 +19,7 @@ abstract class AbstractClient extends Client
     /**
      * @param DefaultAccessTokenProvider $provider
      */
-    public function setProvider( DefaultAccessTokenProvider $provider )
+    public function setProvider(DefaultAccessTokenProvider $provider)
     {
         $this->provider = $provider;
     }
@@ -35,25 +35,25 @@ abstract class AbstractClient extends Client
     /**
      * {@inheritdoc}
      */
-    public function send( $requests )
+    public function send($requests)
     {
         $accessToken = $this->provider->getAccessToken();
 
-        if ( !( $requests instanceof RequestInterface ) ) {
+        if (!($requests instanceof RequestInterface)) {
 
             /** @var $requests RequestInterface[] */
-            foreach ( $requests as &$request ) {
-                $this->addTokenHeader( $request, $accessToken );
+            foreach ($requests as &$request) {
+                $this->addTokenHeader($request, $accessToken);
                 $this->addJsonContentTypeHeader($request);
             }
 
-            return $this->sendMultiple( $requests );
+            return $this->sendMultiple($requests);
         }
 
-        $this->addTokenHeader( $requests, $accessToken );
+        $this->addTokenHeader($requests, $accessToken);
         $this->addJsonContentTypeHeader($requests);
 
-        return parent::send( $requests );
+        return parent::send($requests);
     }
 
     /**
@@ -62,9 +62,9 @@ abstract class AbstractClient extends Client
      *
      * @return \Guzzle\Http\Message\MessageInterface
      */
-    private function addTokenHeader( RequestInterface $request, AccessTokenInterface $accessToken )
+    private function addTokenHeader(RequestInterface $request, AccessTokenInterface $accessToken)
     {
-        return $request->addHeader( 'Authorization', $accessToken->getTokenType() . ' ' . $accessToken->getToken() );
+        return $request->addHeader('Authorization', $accessToken->getTokenType() . ' ' . $accessToken->getToken());
     }
 
     /**
@@ -72,7 +72,7 @@ abstract class AbstractClient extends Client
      *
      * @return \Guzzle\Http\Message\MessageInterface
      */
-    protected function addJsonContentTypeHeader( RequestInterface $request )
+    protected function addJsonContentTypeHeader(RequestInterface $request)
     {
         return $request->addHeader('Content-Type', 'application/json');
     }

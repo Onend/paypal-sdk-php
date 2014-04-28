@@ -54,7 +54,7 @@ class AccessToken implements AccessTokenInterface
     /**
      * {@inheritdoc}
      */
-    public function setToken( $token )
+    public function setToken($token)
     {
         $this->token = $token;
     }
@@ -62,9 +62,9 @@ class AccessToken implements AccessTokenInterface
     /**
      * {@inheritdoc}
      */
-    public function setExpiresIn( $expiresIn )
+    public function setExpiresIn($expiresIn)
     {
-        $this->expiresIn = (int) $expiresIn;
+        $this->expiresIn = (int)$expiresIn;
     }
 
     /**
@@ -72,7 +72,7 @@ class AccessToken implements AccessTokenInterface
      */
     public function getExpiresIn()
     {
-        return (int) $this->expiresIn;
+        return (int)$this->expiresIn;
     }
 
     /**
@@ -80,7 +80,7 @@ class AccessToken implements AccessTokenInterface
      */
     public function isExpired()
     {
-        return ( time() - $this->createdTime ) > ( $this->getExpiresIn() - self::$expiryBuffer );
+        return (time() - $this->createdTime) > ($this->getExpiresIn() - self::$expiryBuffer);
     }
 
     /**
@@ -88,8 +88,8 @@ class AccessToken implements AccessTokenInterface
      */
     public function getRequestId()
     {
-        if ( $this->requestId === null ) {
-            $this->requestId = sha1( getmypid() . $this->createdTime . mt_rand( 0, 0xffff ) );
+        if ($this->requestId === null) {
+            $this->requestId = sha1(getmypid() . $this->createdTime . mt_rand(0, 0xffff));
         }
 
         return $this->requestId;
@@ -106,7 +106,7 @@ class AccessToken implements AccessTokenInterface
     /**
      * {@inheritdoc}
      */
-    public function setTokenType( $tokenType )
+    public function setTokenType($tokenType)
     {
         $this->tokenType = $tokenType;
     }

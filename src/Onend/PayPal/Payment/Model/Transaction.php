@@ -48,7 +48,7 @@ class Transaction extends AbstractModel
     /**
      * @param Amount $amount
      */
-    public function setAmount( Amount $amount )
+    public function setAmount(Amount $amount)
     {
         $this->amount = $amount;
     }
@@ -64,7 +64,7 @@ class Transaction extends AbstractModel
     /**
      * @param string $description
      */
-    public function setDescription( $description )
+    public function setDescription($description)
     {
         $this->description = $description;
     }
@@ -72,7 +72,7 @@ class Transaction extends AbstractModel
     /**
      * @param \Onend\PayPal\Payment\Model\ItemList $item_list
      */
-    public function setItemList( \Onend\PayPal\Payment\Model\ItemList $item_list )
+    public function setItemList(\Onend\PayPal\Payment\Model\ItemList $item_list)
     {
         $this->item_list = $item_list;
     }
@@ -88,7 +88,7 @@ class Transaction extends AbstractModel
     /**
      * @param AbstractRelatedResource[] $related_resources
      */
-    public function setRelatedResources( array $related_resources )
+    public function setRelatedResources(array $related_resources)
     {
         $this->related_resources = $related_resources;
     }

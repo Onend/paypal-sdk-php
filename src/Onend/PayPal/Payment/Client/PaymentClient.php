@@ -19,12 +19,12 @@ class PaymentClient extends AbstractClient
      *
      * @return Payment
      */
-    public function createPayment( Payment $payment )
+    public function createPayment(Payment $payment)
     {
-        $request = $this->post( Endpoint::CREATE_PAYMENT, [ ], $payment->toJSON() );
-        $response = $this->send( $request );
+        $request = $this->post(Endpoint::CREATE_PAYMENT, [], $payment->toJSON());
+        $response = $this->send($request);
 
-        return $this->factoryPaymentResponse( $response );
+        return $this->factoryPaymentResponse($response);
     }
 
     /**
@@ -34,13 +34,13 @@ class PaymentClient extends AbstractClient
      *
      * @return Payment
      */
-    public function executePayment( Payment $payment )
+    public function executePayment(Payment $payment)
     {
-        $data = json_encode( [ "payer_id" => $payment->getPayer()->getPayerInfo()->getPayerId() ] );
-        $request = $this->post( Endpoint::EXECUTE_PAYMENT, null, $data, [ "paymenId" => $payment->getId() ] );
-        $response = $this->send( $request );
+        $data = json_encode(["payer_id" => $payment->getPayer()->getPayerInfo()->getPayerId()]);
+        $request = $this->post(Endpoint::EXECUTE_PAYMENT, null, $data, ["paymenId" => $payment->getId()]);
+        $response = $this->send($request);
 
-        return $this->factoryPaymentResponse( $response );
+        return $this->factoryPaymentResponse($response);
     }
 
     /**
@@ -50,12 +50,12 @@ class PaymentClient extends AbstractClient
      *
      * @return Payment
      */
-    public function lookupPayment( Payment $payment )
+    public function lookupPayment(Payment $payment)
     {
-        $request = $this->get( Endpoint::LOOKUP_PAYMENT, null, [ "paymenId" => $payment->getId() ] );
-        $response = $this->send( $request );
+        $request = $this->get(Endpoint::LOOKUP_PAYMENT, null, ["paymenId" => $payment->getId()]);
+        $response = $this->send($request);
 
-        return $this->factoryPaymentResponse( $response );
+        return $this->factoryPaymentResponse($response);
     }
 
     /**
@@ -63,10 +63,14 @@ class PaymentClient extends AbstractClient
      */
     public function listPayments()
     {
-        $request = $this->get( Endpoint::LIST_PAYMENTS );
-        $response = $this->send( $request );
+        $request = $this->get(Endpoint::LIST_PAYMENTS);
+        $response = $this->send($request);
 
-        return $this->getSerializer()->deserialize( $response->getBody( true ), PaymentList::getClass(), RequestFormat::JSON );
+        return $this->getSerializer()->deserialize(
+            $response->getBody(true),
+            PaymentList::getClass(),
+            RequestFormat::JSON
+        );
     }
 
     /**
@@ -74,8 +78,8 @@ class PaymentClient extends AbstractClient
      *
      * @return Payment
      */
-    protected function factoryPaymentResponse( Response $response )
+    protected function factoryPaymentResponse(Response $response)
     {
-        return $this->getSerializer()->deserialize( $response->getBody( true ), Payment::getClass(), RequestFormat::JSON );
+        return $this->getSerializer()->deserialize($response->getBody(true), Payment::getClass(), RequestFormat::JSON);
     }
 }
