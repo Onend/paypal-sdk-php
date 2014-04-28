@@ -37,11 +37,11 @@ class AuthClient extends Client
      */
     public function auth()
     {
-        $request = $this->post(
-            $this->getBaseUrl() . Endpoint::OAUTH_TOKEN,
-            ["Accept" => "application/json", "Accept-Language" => "en_US",],
+        $request = $this->post($this->getBaseUrl() . Endpoint::OAUTH_TOKEN,
+            ["Accept" => "application/json", "Accept-Language" => "en_US"],
             ["grant_type" => "client_credentials"]
-        )->setAuth($this->credentials->getClientId(), $this->credentials->getSecret());
+        );
+        $request->setAuth($this->credentials->getClientId(), $this->credentials->getSecret());
 
         $response = parent::send($request);
 

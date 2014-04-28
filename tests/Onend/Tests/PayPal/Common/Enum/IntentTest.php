@@ -36,4 +36,4 @@ class IntentTest extends \PHPUnit_Framework_TestCase
         Intent::checkValue("authorize");
         Intent::checkValue("undefined_value");
     }
-} 
+}

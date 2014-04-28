@@ -12,4 +12,4 @@ class PaymentState extends AbstractEnum
     const PENDING = "pending";
     const CANCELED = "canceled";
     const EXPIRED = "expired";
-} 
+}

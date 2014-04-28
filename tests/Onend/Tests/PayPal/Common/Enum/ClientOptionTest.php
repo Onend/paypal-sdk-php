@@ -37,4 +37,4 @@ class ClientOptionTest extends \PHPUnit_Framework_TestCase
         ClientOption::checkValue("secret");
         ClientOption::checkValue("undefined_value");
     }
-} 
+}

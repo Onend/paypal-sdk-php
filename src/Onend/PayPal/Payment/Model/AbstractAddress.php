@@ -171,5 +171,4 @@ abstract class AbstractAddress extends AbstractModel
     {
         $this->state = $state;
     }
-
-} 
+}

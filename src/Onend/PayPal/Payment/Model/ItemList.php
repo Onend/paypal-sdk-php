@@ -63,4 +63,4 @@ class ItemList extends AbstractModel
     {
         $this->shipping_address = $shipping_address;
     }
-} 
+}

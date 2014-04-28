@@ -36,4 +36,4 @@ class ApiBaseUrlTest extends \PHPUnit_Framework_TestCase
         ApiBaseUrl::checkValue("https://api.sandbox.paypal.com/");
         ApiBaseUrl::checkValue("undefined_value");
     }
-} 
+}
