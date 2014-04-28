@@ -16,7 +16,7 @@ abstract class AbstractClientFactory implements ClientFactoryInterface
     protected $credentials;
 
     /**
-     * @var AccessTokenProviderInterface
+     * @var DefaultAccessTokenProvider
      */
     protected $accessTokenProvider;
 
