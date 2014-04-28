@@ -8,7 +8,7 @@ call_user_func(function() {
         throw new \RuntimeException('Did not find vendor/autoload.php. Did you run "composer install --dev"?');
     }
 
-    $loader = require $autoloadFile;
+    require $autoloadFile;
 
     AnnotationRegistry::registerLoader('class_exists');
 });
