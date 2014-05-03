@@ -145,4 +145,4 @@ class PayerInfo extends AbstractModel
     {
         return $this->shipping_address;
     }
-} 
+}
