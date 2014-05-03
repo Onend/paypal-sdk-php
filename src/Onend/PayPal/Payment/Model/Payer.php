@@ -43,8 +43,8 @@ class Payer extends AbstractModel
      */
     public function setFundingInstruments(array $fundingInstruments)
     {
-        foreach ($fundingInstruments as $funding_instrument) {
-            $this->addFundingInstrument($funding_instrument);
+        foreach ($fundingInstruments as $fundingInstrument) {
+            $this->addFundingInstrument($fundingInstrument);
         }
     }
 
@@ -65,7 +65,7 @@ class Payer extends AbstractModel
     }
 
     /**
-     * @param mixed $paymentMethod
+     * @param string $paymentMethod
      * @throws \InvalidArgumentException
      */
     public function setPaymentMethod($paymentMethod)
