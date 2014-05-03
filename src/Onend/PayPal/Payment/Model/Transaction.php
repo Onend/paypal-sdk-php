@@ -70,15 +70,15 @@ class Transaction extends AbstractModel
     }
 
     /**
-     * @param \Onend\PayPal\Payment\Model\ItemList $item_list
+     * @param ItemList $itemList
      */
-    public function setItemList(\Onend\PayPal\Payment\Model\ItemList $item_list)
+    public function setItemList(ItemList $itemList)
     {
-        $this->item_list = $item_list;
+        $this->item_list = $itemList;
     }
 
     /**
-     * @return \Onend\PayPal\Payment\Model\ItemList
+     * @return ItemList
      */
     public function getItemList()
     {
@@ -86,11 +86,11 @@ class Transaction extends AbstractModel
     }
 
     /**
-     * @param AbstractRelatedResource[] $related_resources
+     * @param AbstractRelatedResource[] $relatedResources
      */
-    public function setRelatedResources(array $related_resources)
+    public function setRelatedResources(array $relatedResources)
     {
-        $this->related_resources = $related_resources;
+        $this->related_resources = $relatedResources;
     }
 
     /**

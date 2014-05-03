@@ -67,11 +67,11 @@ class PayerInfo extends AbstractModel
     }
 
     /**
-     * @param string $first_name
+     * @param string $firstName
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        $this->first_name = $first_name;
+        $this->first_name = $firstName;
     }
 
     /**
@@ -83,11 +83,11 @@ class PayerInfo extends AbstractModel
     }
 
     /**
-     * @param string $last_name
+     * @param string $lastName
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        $this->last_name = $last_name;
+        $this->last_name = $lastName;
     }
 
     /**
@@ -99,11 +99,11 @@ class PayerInfo extends AbstractModel
     }
 
     /**
-     * @param string $payer_id
+     * @param string $payerId
      */
-    public function setPayerId($payer_id)
+    public function setPayerId($payerId)
     {
-        $this->payer_id = $payer_id;
+        $this->payer_id = $payerId;
     }
 
     /**
@@ -131,11 +131,11 @@ class PayerInfo extends AbstractModel
     }
 
     /**
-     * @param ShippingAddress $shipping_address
+     * @param ShippingAddress $shippingAddress
      */
-    public function setShippingAddress(ShippingAddress $shipping_address)
+    public function setShippingAddress(ShippingAddress $shippingAddress)
     {
-        $this->shipping_address = $shipping_address;
+        $this->shipping_address = $shippingAddress;
     }
 
     /**

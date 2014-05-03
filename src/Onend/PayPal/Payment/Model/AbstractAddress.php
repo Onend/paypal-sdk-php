@@ -83,13 +83,13 @@ abstract class AbstractAddress extends AbstractModel
     }
 
     /**
-     * @param string $country_code
+     * @param string $countryCode
      * @throws \InvalidArgumentException
      */
-    public function setCountryCode($country_code)
+    public function setCountryCode($countryCode)
     {
-        CountryCode::checkValue($country_code);
-        $this->country_code = $country_code;
+        CountryCode::checkValue($countryCode);
+        $this->country_code = $countryCode;
     }
 
     /**
@@ -149,11 +149,11 @@ abstract class AbstractAddress extends AbstractModel
     }
 
     /**
-     * @param string $postal_code
+     * @param string $postalCode
      */
-    public function setPostalCode($postal_code)
+    public function setPostalCode($postalCode)
     {
-        $this->postal_code = $postal_code;
+        $this->postal_code = $postalCode;
     }
 
     /**

@@ -72,11 +72,11 @@ class Sale extends AbstractRelatedResource
     }
 
     /**
-     * @param string $create_time
+     * @param string $createTime
      */
-    public function setCreateTime($create_time)
+    public function setCreateTime($createTime)
     {
-        $this->create_time = $create_time;
+        $this->create_time = $createTime;
     }
 
     /**
@@ -120,11 +120,11 @@ class Sale extends AbstractRelatedResource
     }
 
     /**
-     * @param string $parent_payment
+     * @param string $parentPayment
      */
-    public function setParentPayment($parent_payment)
+    public function setParentPayment($parentPayment)
     {
-        $this->parent_payment = $parent_payment;
+        $this->parent_payment = $parentPayment;
     }
 
     /**
@@ -152,11 +152,11 @@ class Sale extends AbstractRelatedResource
     }
 
     /**
-     * @param string $update_time
+     * @param string $updateTime
      */
-    public function setUpdateTime($update_time)
+    public function setUpdateTime($updateTime)
     {
-        $this->update_time = $update_time;
+        $this->update_time = $updateTime;
     }
 
     /**

@@ -39,21 +39,21 @@ class Payer extends AbstractModel
     }
 
     /**
-     * @param FundingInstrument[] $funding_instruments
+     * @param FundingInstrument[] $fundingInstruments
      */
-    public function setFundingInstruments(array $funding_instruments)
+    public function setFundingInstruments(array $fundingInstruments)
     {
-        foreach ($funding_instruments as $funding_instrument) {
+        foreach ($fundingInstruments as $funding_instrument) {
             $this->addFundingInstrument($funding_instrument);
         }
     }
 
     /**
-     * @param FundingInstrument $funding_instrument
+     * @param FundingInstrument $fundingInstrument
      */
-    public function addFundingInstrument(FundingInstrument $funding_instrument)
+    public function addFundingInstrument(FundingInstrument $fundingInstrument)
     {
-        $this->funding_instruments[] = $funding_instrument;
+        $this->funding_instruments[] = $fundingInstrument;
     }
 
     /**
@@ -65,13 +65,13 @@ class Payer extends AbstractModel
     }
 
     /**
-     * @param mixed $payment_method
+     * @param mixed $paymentMethod
      * @throws \InvalidArgumentException
      */
-    public function setPaymentMethod($payment_method)
+    public function setPaymentMethod($paymentMethod)
     {
-        PaymentMethod::checkValue($payment_method);
-        $this->payment_method = $payment_method;
+        PaymentMethod::checkValue($paymentMethod);
+        $this->payment_method = $paymentMethod;
     }
 
     /**
@@ -83,10 +83,10 @@ class Payer extends AbstractModel
     }
 
     /**
-     * @param PayerInfo $payer_info
+     * @param PayerInfo $payerInfo
      */
-    public function setPayerInfo(PayerInfo $payer_info)
+    public function setPayerInfo(PayerInfo $payerInfo)
     {
-        $this->payer_info = $payer_info;
+        $this->payer_info = $payerInfo;
     }
 }

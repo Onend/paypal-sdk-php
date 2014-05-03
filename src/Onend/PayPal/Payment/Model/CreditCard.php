@@ -94,11 +94,11 @@ class CreditCard extends AbstractModel
     }
 
     /**
-     * @param BillingAddress $billing_address
+     * @param BillingAddress $billingAddress
      */
-    public function setBillingAddress(BillingAddress $billing_address)
+    public function setBillingAddress(BillingAddress $billingAddress)
     {
-        $this->billing_address = $billing_address;
+        $this->billing_address = $billingAddress;
     }
 
     /**
@@ -126,11 +126,11 @@ class CreditCard extends AbstractModel
     }
 
     /**
-     * @param int $expire_month
+     * @param int $expireMonth
      */
-    public function setExpireMonth($expire_month)
+    public function setExpireMonth($expireMonth)
     {
-        $this->expire_month = $expire_month;
+        $this->expire_month = $expireMonth;
     }
 
     /**
@@ -142,11 +142,11 @@ class CreditCard extends AbstractModel
     }
 
     /**
-     * @param int $expire_year
+     * @param int $expireYear
      */
-    public function setExpireYear($expire_year)
+    public function setExpireYear($expireYear)
     {
-        $this->expire_year = $expire_year;
+        $this->expire_year = $expireYear;
     }
 
     /**
@@ -158,11 +158,11 @@ class CreditCard extends AbstractModel
     }
 
     /**
-     * @param string $first_name
+     * @param string $firstName
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        $this->first_name = $first_name;
+        $this->first_name = $firstName;
     }
 
     /**
@@ -190,11 +190,11 @@ class CreditCard extends AbstractModel
     }
 
     /**
-     * @param string $last_name
+     * @param string $lastName
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        $this->last_name = $last_name;
+        $this->last_name = $lastName;
     }
 
     /**
@@ -222,11 +222,11 @@ class CreditCard extends AbstractModel
     }
 
     /**
-     * @param string $payer_id
+     * @param string $payerId
      */
-    public function setPayerId($payer_id)
+    public function setPayerId($payerId)
     {
-        $this->payer_id = $payer_id;
+        $this->payer_id = $payerId;
     }
 
     /**
@@ -254,10 +254,10 @@ class CreditCard extends AbstractModel
     }
 
     /**
-     * @param string $valid_until
+     * @param string $validUntil
      */
-    public function setValidUntil($valid_until)
+    public function setValidUntil($validUntil)
     {
-        $this->valid_until = $valid_until;
+        $this->valid_until = $validUntil;
     }
 }

@@ -57,10 +57,10 @@ class ItemList extends AbstractModel
     }
 
     /**
-     * @param ShippingAddress $shipping_address
+     * @param ShippingAddress $shippingAddress
      */
-    public function setShippingAddress(ShippingAddress $shipping_address)
+    public function setShippingAddress(ShippingAddress $shippingAddress)
     {
-        $this->shipping_address = $shipping_address;
+        $this->shipping_address = $shippingAddress;
     }
 }

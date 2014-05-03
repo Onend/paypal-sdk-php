@@ -84,11 +84,11 @@ class Payment extends AbstractModel
     }
 
     /**
-     * @param string $create_time
+     * @param string $createTime
      */
-    public function setCreateTime($create_time)
+    public function setCreateTime($createTime)
     {
-        $this->create_time = $create_time;
+        $this->create_time = $createTime;
     }
 
     /**
@@ -100,11 +100,11 @@ class Payment extends AbstractModel
     }
 
     /**
-     * @param string $update_time
+     * @param string $updateTime
      */
-    public function setUpdateTime($update_time)
+    public function setUpdateTime($updateTime)
     {
-        $this->update_time = $update_time;
+        $this->update_time = $updateTime;
     }
 
     /**
@@ -176,10 +176,10 @@ class Payment extends AbstractModel
     }
 
     /**
-     * @param RedirectUrl $redirect_url
+     * @param RedirectUrl $redirectUrl
      */
-    public function setRedirectUrls(RedirectUrl $redirect_url)
+    public function setRedirectUrls(RedirectUrl $redirectUrl)
     {
-        $this->redirect_urls = $redirect_url;
+        $this->redirect_urls = $redirectUrl;
     }
 }
