@@ -48,14 +48,14 @@ class Payment extends AbstractModel
     /**
      * @JMS\Type("array<Onend\PayPal\Payment\Model\Transaction>")
      *
-     * @var array
+     * @var Transaction[]
      */
     protected $transactions;
 
     /**
      * @JMS\Type("Onend\PayPal\Payment\Model\RedirectUrl")
      *
-     * @var array
+     * @var RedirectUrl
      */
     protected $redirect_urls;
 
@@ -142,7 +142,7 @@ class Payment extends AbstractModel
     }
 
     /**
-     * @return array
+     * @return Transaction[]
      */
     public function getTransactions()
     {

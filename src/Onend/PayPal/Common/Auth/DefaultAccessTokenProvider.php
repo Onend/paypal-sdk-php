@@ -56,7 +56,6 @@ class DefaultAccessTokenProvider implements AccessTokenProviderInterface
 
     /**
      * @param AccessTokenInterface $accessToken
-     * @return void
      */
     public function setAccessToken(AccessTokenInterface $accessToken)
     {
@@ -76,7 +75,7 @@ class DefaultAccessTokenProvider implements AccessTokenProviderInterface
     }
 
     /**
-     * @return mixed
+     * @return AccessToken
      */
     protected function createNewAccessToken()
     {

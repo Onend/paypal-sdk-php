@@ -10,7 +10,7 @@ abstract class AbstractEnum
     protected static $cache = [];
 
     /**
-     * @return array
+     * @return string[]
      */
     public static function keys()
     {
@@ -18,7 +18,7 @@ abstract class AbstractEnum
     }
 
     /**
-     * @return array
+     * @return string[]
      */
     public static function values()
     {

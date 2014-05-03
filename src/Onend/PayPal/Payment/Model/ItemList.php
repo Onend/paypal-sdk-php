@@ -23,7 +23,7 @@ class ItemList extends AbstractModel
     protected $shipping_address;
 
     /**
-     * @return array
+     * @return Item[]
      */
     public function getItems()
     {

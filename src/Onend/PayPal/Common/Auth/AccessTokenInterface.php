@@ -13,7 +13,7 @@ interface AccessTokenInterface
     public function getToken();
 
     /**
-     * @param $token
+     * @param string $token
      * @return void
      */
     public function setToken($token);
@@ -29,7 +29,7 @@ interface AccessTokenInterface
     public function getTokenType();
 
     /**
-     * @param $tokenType
+     * @param string $tokenType
      * @return void
      */
     public function setTokenType($tokenType);

@@ -16,8 +16,8 @@ class Credentials
     protected $secret;
 
     /**
-     * @param $clientId
-     * @param $secret
+     * @param string $clientId
+     * @param string $secret
      */
     public function __construct($clientId, $secret)
     {
