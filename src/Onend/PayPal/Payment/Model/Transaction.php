@@ -3,7 +3,6 @@
 namespace Onend\PayPal\Payment\Model;
 
 use JMS\Serializer\Annotation as JMS;
-use JMS\Serializer\JsonDeserializationVisitor;
 
 use Onend\PayPal\Common\Model\AbstractModel;
 
