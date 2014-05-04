@@ -2,12 +2,12 @@
 
 namespace Onend\PayPal\Common\Factory\Client;
 
-use Onend\PayPal\Common\Client\AbstractClient;
+use Onend\PayPal\Common\Client\AbstractAuthenticatedClient;
 
 interface ClientFactoryInterface
 {
     /**
-     * @return AbstractClient
+     * @return AbstractAuthenticatedClient
      */
     public function factory();
 }

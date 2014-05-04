@@ -4,13 +4,13 @@ namespace Onend\PayPal\Payment\Client;
 
 use Guzzle\Http\Message\Response;
 
-use Onend\PayPal\Common\Client\AbstractClient;
+use Onend\PayPal\Common\Client\AbstractAuthenticatedClient;
 use Onend\PayPal\Common\Enum\Endpoint;
 use Onend\PayPal\Common\Enum\RequestFormat;
 use Onend\PayPal\Payment\Model\Payment;
 use Onend\PayPal\Payment\Model\PaymentList;
 
-class PaymentClient extends AbstractClient
+class PaymentClient extends AbstractAuthenticatedClient
 {
     /**
      * Create a payment

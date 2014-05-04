@@ -9,7 +9,7 @@ use JMS\Serializer\SerializerBuilder;
 use Onend\PayPal\Common\Auth\AccessTokenInterface;
 use Onend\PayPal\Common\Auth\DefaultAccessTokenProvider;
 
-abstract class AbstractClient extends Client
+abstract class AbstractAuthenticatedClient extends Client
 {
     /**
      * @var DefaultAccessTokenProvider
