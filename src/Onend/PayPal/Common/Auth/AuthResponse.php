@@ -63,7 +63,7 @@ class AuthResponse
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getAccessToken()
     {
@@ -71,7 +71,7 @@ class AuthResponse
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getAppId()
     {
@@ -79,7 +79,7 @@ class AuthResponse
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getExpiresIn()
     {
@@ -95,7 +95,7 @@ class AuthResponse
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getTokenType()
     {
