@@ -2,46 +2,63 @@
 
 namespace Onend\PayPal\Payment\Model;
 
+use JMS\Serializer\Annotation as JMS;
 use Onend\PayPal\Common\Model\AbstractModel;
 
 class CreditCardToken extends AbstractModel
 {
     /**
+     * @JMS\Type("string")
+     * @JMS\SerializedName("credit_card_id")
+     *
      * @var string
      */
-    protected $credit_card_id;
+    protected $creditCardId;
 
     /**
+     * @JMS\Type("string")
+     * @JMS\SerializedName("payer_id")
+     *
      * @var string
      */
-    protected $payer_id;
+    protected $payerId;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $last4;
 
     /**
+     * @JMS\Type("string")
+     *
      * @var string
      */
     protected $type;
 
     /**
+     * @JMS\Type("integer")
+     * @JMS\SerializedNamew("expire_year")
+     *
      * @var int
      */
-    protected $expire_year;
+    protected $expireYear;
 
     /**
+     * @JMS\Type("integer")
+     * @JMS\SerializedName("expire_month")
+     *
      * @var int
      */
-    protected $expire_month;
+    protected $expireMonth;
 
     /**
      * @return string
      */
     public function getCreditCardId()
     {
-        return $this->credit_card_id;
+        return $this->creditCardId;
     }
 
     /**
@@ -49,7 +66,7 @@ class CreditCardToken extends AbstractModel
      */
     public function setCreditCardId($creditCardId)
     {
-        $this->credit_card_id = $creditCardId;
+        $this->creditCardId = $creditCardId;
     }
 
     /**
@@ -57,7 +74,7 @@ class CreditCardToken extends AbstractModel
      */
     public function getExpireMonth()
     {
-        return $this->expire_month;
+        return $this->expireMonth;
     }
 
     /**
@@ -65,7 +82,7 @@ class CreditCardToken extends AbstractModel
      */
     public function setExpireMonth($expireMonth)
     {
-        $this->expire_month = $expireMonth;
+        $this->expireMonth = $expireMonth;
     }
 
     /**
@@ -73,7 +90,7 @@ class CreditCardToken extends AbstractModel
      */
     public function getExpireYear()
     {
-        return $this->expire_year;
+        return $this->expireYear;
     }
 
     /**
@@ -81,7 +98,7 @@ class CreditCardToken extends AbstractModel
      */
     public function setExpireYear($expireYear)
     {
-        $this->expire_year = $expireYear;
+        $this->expireYear = $expireYear;
     }
 
     /**
@@ -105,7 +122,7 @@ class CreditCardToken extends AbstractModel
      */
     public function getPayerId()
     {
-        return $this->payer_id;
+        return $this->payerId;
     }
 
     /**
@@ -113,7 +130,7 @@ class CreditCardToken extends AbstractModel
      */
     public function setPayerId($payerId)
     {
-        $this->payer_id = $payerId;
+        $this->payerId = $payerId;
     }
 
     /**

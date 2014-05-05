@@ -10,24 +10,26 @@ class FundingInstrument extends AbstractModel
 {
     /**
      * @JMS\Type("Onend\PayPal\Payment\Model\CreditCard")
+     * @JMS\SerializedName("credit_card")
      *
      * @var CreditCard
      */
-    protected $credit_card;
+    protected $creditCard;
 
     /**
      * @JMS\Type("Onend\PayPal\Payment\Model\CreditCardToken")
+     * @JMS\SerializedName("credit_card_token")
      *
      * @var CreditCardToken
      */
-    protected $credit_card_token;
+    protected $creditCardToken;
 
     /**
      * @return CreditCard
      */
     public function getCreditCard()
     {
-        return $this->credit_card;
+        return $this->creditCard;
     }
 
     /**
@@ -35,7 +37,7 @@ class FundingInstrument extends AbstractModel
      */
     public function setCreditCard(CreditCard $creditCard)
     {
-        $this->credit_card = $creditCard;
+        $this->creditCard = $creditCard;
     }
 
     /**
@@ -43,7 +45,7 @@ class FundingInstrument extends AbstractModel
      */
     public function getCreditCardToken()
     {
-        return $this->credit_card_token;
+        return $this->creditCardToken;
     }
 
     /**
@@ -51,6 +53,6 @@ class FundingInstrument extends AbstractModel
      */
     public function setCreditCardToken(CreditCardToken $creditCardToken)
     {
-        $this->credit_card_token = $creditCardToken;
+        $this->creditCardToken = $creditCardToken;
     }
 }

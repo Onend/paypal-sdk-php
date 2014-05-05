@@ -18,18 +18,19 @@ class Payment extends AbstractModel
 
     /**
      * @JMS\Type("string")
-     *
+     * @JMS\SerializedName("create_time")
      *
      * @var string
      */
-    protected $create_time;
+    protected $createTime;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("update_time")
      *
      * @var string
      */
-    protected $update_time;
+    protected $updateTime;
 
     /**
      * @JMS\Type("string")
@@ -54,10 +55,11 @@ class Payment extends AbstractModel
 
     /**
      * @JMS\Type("Onend\PayPal\Payment\Model\RedirectUrl")
+     * @JMS\SerializedName("redirect_urls")
      *
      * @var RedirectUrl
      */
-    protected $redirect_urls;
+    protected $redirectUrls;
 
     /**
      * @return string
@@ -80,7 +82,7 @@ class Payment extends AbstractModel
      */
     public function getCreateTime()
     {
-        return $this->create_time;
+        return $this->createTime;
     }
 
     /**
@@ -88,7 +90,7 @@ class Payment extends AbstractModel
      */
     public function setCreateTime($createTime)
     {
-        $this->create_time = $createTime;
+        $this->createTime = $createTime;
     }
 
     /**
@@ -96,7 +98,7 @@ class Payment extends AbstractModel
      */
     public function getUpdateTime()
     {
-        return $this->update_time;
+        return $this->updateTime;
     }
 
     /**
@@ -104,7 +106,7 @@ class Payment extends AbstractModel
      */
     public function setUpdateTime($updateTime)
     {
-        $this->update_time = $updateTime;
+        $this->updateTime = $updateTime;
     }
 
     /**
@@ -172,7 +174,7 @@ class Payment extends AbstractModel
      */
     public function getRedirectUrls()
     {
-        return $this->redirect_urls;
+        return $this->redirectUrls;
     }
 
     /**
@@ -180,6 +182,6 @@ class Payment extends AbstractModel
      */
     public function setRedirectUrls(RedirectUrl $redirectUrl)
     {
-        $this->redirect_urls = $redirectUrl;
+        $this->redirectUrls = $redirectUrl;
     }
 }

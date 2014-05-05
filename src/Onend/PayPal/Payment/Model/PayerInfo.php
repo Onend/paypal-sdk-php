@@ -17,24 +17,27 @@ class PayerInfo extends AbstractModel
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("first_name")
      *
      * @var string
      */
-    protected $first_name;
+    protected $firstName;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("last_name")
      *
      * @var string
      */
-    protected $last_name;
+    protected $lastName;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("payer_id")
      *
      * @var string
      */
-    protected $payer_id;
+    protected $payerId;
 
     /**
      * @JMS\Type("string")
@@ -45,10 +48,11 @@ class PayerInfo extends AbstractModel
 
     /**
      * @JMS\Type("Onend\PayPal\Payment\Model\ShippingAddress")
+     * @JMS\SerializedName("shipping_address")
      *
      * @var ShippingAddress
      */
-    protected $shipping_address;
+    protected $shippingAddress;
 
     /**
      * @param string $email
@@ -71,7 +75,7 @@ class PayerInfo extends AbstractModel
      */
     public function setFirstName($firstName)
     {
-        $this->first_name = $firstName;
+        $this->firstName = $firstName;
     }
 
     /**
@@ -79,7 +83,7 @@ class PayerInfo extends AbstractModel
      */
     public function getFirstName()
     {
-        return $this->first_name;
+        return $this->firstName;
     }
 
     /**
@@ -87,7 +91,7 @@ class PayerInfo extends AbstractModel
      */
     public function setLastName($lastName)
     {
-        $this->last_name = $lastName;
+        $this->lastName = $lastName;
     }
 
     /**
@@ -95,7 +99,7 @@ class PayerInfo extends AbstractModel
      */
     public function getLastName()
     {
-        return $this->last_name;
+        return $this->lastName;
     }
 
     /**
@@ -103,7 +107,7 @@ class PayerInfo extends AbstractModel
      */
     public function setPayerId($payerId)
     {
-        $this->payer_id = $payerId;
+        $this->payerId = $payerId;
     }
 
     /**
@@ -111,7 +115,7 @@ class PayerInfo extends AbstractModel
      */
     public function getPayerId()
     {
-        return $this->payer_id;
+        return $this->payerId;
     }
 
     /**
@@ -135,7 +139,7 @@ class PayerInfo extends AbstractModel
      */
     public function setShippingAddress(ShippingAddress $shippingAddress)
     {
-        $this->shipping_address = $shippingAddress;
+        $this->shippingAddress = $shippingAddress;
     }
 
     /**
@@ -143,6 +147,6 @@ class PayerInfo extends AbstractModel
      */
     public function getShippingAddress()
     {
-        return $this->shipping_address;
+        return $this->shippingAddress;
     }
 }

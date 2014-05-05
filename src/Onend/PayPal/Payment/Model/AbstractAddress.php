@@ -32,17 +32,19 @@ abstract class AbstractAddress extends AbstractModel
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("country_code")
      *
      * @var string
      */
-    protected $country_code;
+    protected $countryCode;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("postal_code")
      *
      * @var string
      */
-    protected $postal_code;
+    protected $postalCode;
 
     /**
      * @JMS\Type("string")
@@ -79,7 +81,7 @@ abstract class AbstractAddress extends AbstractModel
      */
     public function getCountryCode()
     {
-        return $this->country_code;
+        return $this->countryCode;
     }
 
     /**
@@ -89,7 +91,7 @@ abstract class AbstractAddress extends AbstractModel
     public function setCountryCode($countryCode)
     {
         CountryCode::checkValue($countryCode);
-        $this->country_code = $countryCode;
+        $this->countryCode = $countryCode;
     }
 
     /**
@@ -145,7 +147,7 @@ abstract class AbstractAddress extends AbstractModel
      */
     public function getPostalCode()
     {
-        return $this->postal_code;
+        return $this->postalCode;
     }
 
     /**
@@ -153,7 +155,7 @@ abstract class AbstractAddress extends AbstractModel
      */
     public function setPostalCode($postalCode)
     {
-        $this->postal_code = $postalCode;
+        $this->postalCode = $postalCode;
     }
 
     /**

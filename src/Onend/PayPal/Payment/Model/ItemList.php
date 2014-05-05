@@ -17,10 +17,11 @@ class ItemList extends AbstractModel
 
     /**
      * @JMS\Type("Onend\PayPal\Payment\Model\ShippingAddress")
+     * @JMS\SerializedName("shipping_address")
      *
      * @var ShippingAddress
      */
-    protected $shipping_address;
+    protected $shippingAddress;
 
     /**
      * @return Item[]
@@ -35,6 +36,8 @@ class ItemList extends AbstractModel
      */
     public function setItems(array $items)
     {
+        $this->items = [];
+
         foreach ($items as $item) {
             $this->addItem($item);
         }
@@ -53,7 +56,7 @@ class ItemList extends AbstractModel
      */
     public function getShippingAddress()
     {
-        return $this->shipping_address;
+        return $this->shippingAddress;
     }
 
     /**
@@ -61,6 +64,6 @@ class ItemList extends AbstractModel
      */
     public function setShippingAddress(ShippingAddress $shippingAddress)
     {
-        $this->shipping_address = $shippingAddress;
+        $this->shippingAddress = $shippingAddress;
     }
 }

@@ -20,7 +20,19 @@ class PaymentList extends AbstractModel
      */
     public function setPayments(array $payments)
     {
-        $this->payments = $payments;
+        $this->payments = [];
+
+        foreach ($payments as $payment) {
+            $this->addPayment($payment);
+        }
+    }
+
+    /**
+     * @param Payment $payment
+     */
+    public function addPayment(Payment $payment)
+    {
+        $this->payments[] = $payment;
     }
 
     /**

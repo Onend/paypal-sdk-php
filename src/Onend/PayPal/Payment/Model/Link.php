@@ -76,5 +76,4 @@ class Link extends AbstractModel
     {
         return $this->rel;
     }
-
 }

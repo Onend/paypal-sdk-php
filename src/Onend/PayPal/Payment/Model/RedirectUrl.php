@@ -2,26 +2,33 @@
 
 namespace Onend\PayPal\Payment\Model;
 
+use JMS\Serializer\Annotation as JMS;
 use Onend\PayPal\Common\Model\AbstractModel;
 
 class RedirectUrl extends AbstractModel
 {
     /**
+     * @JMS\Type("string")
+     * @JMS\SerializedName("return_url")
+     *
      * @var string
      */
-    protected $return_url;
+    protected $returnUrl;
 
     /**
+     * @JMS\Type("string")
+     * @JMS\SerializedName("cancel_url")
+     *
      * @var string
      */
-    protected $cancel_url;
+    protected $cancelUrl;
 
     /**
      * @return string
      */
     public function getCancelUrl()
     {
-        return $this->cancel_url;
+        return $this->cancelUrl;
     }
 
     /**
@@ -29,7 +36,7 @@ class RedirectUrl extends AbstractModel
      */
     public function setCancelUrl($cancelUrl)
     {
-        $this->cancel_url = $cancelUrl;
+        $this->cancelUrl = $cancelUrl;
     }
 
     /**
@@ -37,7 +44,7 @@ class RedirectUrl extends AbstractModel
      */
     public function getReturnUrl()
     {
-        return $this->return_url;
+        return $this->returnUrl;
     }
 
     /**
@@ -45,6 +52,6 @@ class RedirectUrl extends AbstractModel
      */
     public function setReturnUrl($returnUrl)
     {
-        $this->return_url = $returnUrl;
+        $this->returnUrl = $returnUrl;
     }
 }

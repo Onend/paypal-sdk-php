@@ -24,17 +24,19 @@ class Transaction extends AbstractModel
 
     /**
      * @JMS\Type("Onend\PayPal\Payment\Model\ItemList")
+     * @JMS\SerializedName("item_list")
      *
      * @var ItemList
      */
-    protected $item_list;
+    protected $itemList;
 
     /**
      * @JMS\Type("array<Onend\PayPal\Payment\Model\RelatedResources>")
+     * @JMS\SerializedName("related_resources")
      *
      * @var AbstractRelatedResource[]
      */
-    protected $related_resources;
+    protected $relatedResources;
 
     /**
      * @return Amount
@@ -73,7 +75,7 @@ class Transaction extends AbstractModel
      */
     public function setItemList(ItemList $itemList)
     {
-        $this->item_list = $itemList;
+        $this->itemList = $itemList;
     }
 
     /**
@@ -81,7 +83,7 @@ class Transaction extends AbstractModel
      */
     public function getItemList()
     {
-        return $this->item_list;
+        return $this->itemList;
     }
 
     /**
@@ -89,7 +91,7 @@ class Transaction extends AbstractModel
      */
     public function setRelatedResources(array $relatedResources)
     {
-        $this->related_resources = $relatedResources;
+        $this->relatedResources = $relatedResources;
     }
 
     /**
@@ -97,6 +99,6 @@ class Transaction extends AbstractModel
      */
     public function getRelatedResources()
     {
-        return $this->related_resources;
+        return $this->relatedResources;
     }
 }

@@ -15,17 +15,19 @@ class Sale extends AbstractRelatedResource
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("create_time")
      *
      * @var string
      */
-    protected $create_time;
+    protected $createTime;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("update_time")
      *
      * @var string
      */
-    protected $update_time;
+    protected $updateTime;
 
     /**
      * @JMS\Type("string")
@@ -43,10 +45,11 @@ class Sale extends AbstractRelatedResource
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("parent_payment")
      *
      * @var string
      */
-    protected $parent_payment;
+    protected $parentPayment;
 
     /**
      * @JMS\Type("array<Onend\PayPal\Payment\Model\Link>")
@@ -76,7 +79,7 @@ class Sale extends AbstractRelatedResource
      */
     public function setCreateTime($createTime)
     {
-        $this->create_time = $createTime;
+        $this->createTime = $createTime;
     }
 
     /**
@@ -84,7 +87,7 @@ class Sale extends AbstractRelatedResource
      */
     public function getCreateTime()
     {
-        return $this->create_time;
+        return $this->createTime;
     }
 
     /**
@@ -124,7 +127,7 @@ class Sale extends AbstractRelatedResource
      */
     public function setParentPayment($parentPayment)
     {
-        $this->parent_payment = $parentPayment;
+        $this->parentPayment = $parentPayment;
     }
 
     /**
@@ -132,7 +135,7 @@ class Sale extends AbstractRelatedResource
      */
     public function getParentPayment()
     {
-        return $this->parent_payment;
+        return $this->parentPayment;
     }
 
     /**
@@ -156,7 +159,7 @@ class Sale extends AbstractRelatedResource
      */
     public function setUpdateTime($updateTime)
     {
-        $this->update_time = $updateTime;
+        $this->updateTime = $updateTime;
     }
 
     /**
@@ -164,6 +167,6 @@ class Sale extends AbstractRelatedResource
      */
     public function getUpdateTime()
     {
-        return $this->update_time;
+        return $this->updateTime;
     }
 }

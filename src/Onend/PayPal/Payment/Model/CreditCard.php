@@ -17,10 +17,11 @@ class CreditCard extends AbstractModel
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("payer_id")
      *
      * @var string
      */
-    protected $payer_id;
+    protected $payerId;
 
     /**
      * @JMS\Type("string")
@@ -38,17 +39,19 @@ class CreditCard extends AbstractModel
 
     /**
      * @JMS\Type("integer")
+     * @JMS\SerializedName("expire_month")
      *
      * @var int
      */
-    protected $expire_month;
+    protected $expireMonth;
 
     /**
      * @JMS\Type("integer")
+     * @JMS\SerializedName("expire_year")
      *
      * @var int
      */
-    protected $expire_year;
+    protected $expireYear;
 
     /**
      * @JMS\Type("integer")
@@ -59,38 +62,42 @@ class CreditCard extends AbstractModel
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("first_name")
      *
      * @var string
      */
-    protected $first_name;
+    protected $firstName;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("last_name")
      *
      * @var string
      */
-    protected $last_name;
+    protected $lastName;
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("valid_until")
      *
      * @var string
      */
-    protected $valid_until;
+    protected $validUntil;
 
     /**
      * @JMS\Type("Onend\PayPal\Payment\Model\BillingAddress")
+     * @JMS\SerializedName("billing_address")
      *
      * @var BillingAddress
      */
-    protected $billing_address;
+    protected $billingAddress;
 
     /**
      * @return BillingAddress
      */
     public function getBillingAddress()
     {
-        return $this->billing_address;
+        return $this->billingAddress;
     }
 
     /**
@@ -98,7 +105,7 @@ class CreditCard extends AbstractModel
      */
     public function setBillingAddress(BillingAddress $billingAddress)
     {
-        $this->billing_address = $billingAddress;
+        $this->billingAddress = $billingAddress;
     }
 
     /**
@@ -122,7 +129,7 @@ class CreditCard extends AbstractModel
      */
     public function getExpireMonth()
     {
-        return $this->expire_month;
+        return $this->expireMonth;
     }
 
     /**
@@ -130,7 +137,7 @@ class CreditCard extends AbstractModel
      */
     public function setExpireMonth($expireMonth)
     {
-        $this->expire_month = $expireMonth;
+        $this->expireMonth = $expireMonth;
     }
 
     /**
@@ -138,7 +145,7 @@ class CreditCard extends AbstractModel
      */
     public function getExpireYear()
     {
-        return $this->expire_year;
+        return $this->expireYear;
     }
 
     /**
@@ -146,7 +153,7 @@ class CreditCard extends AbstractModel
      */
     public function setExpireYear($expireYear)
     {
-        $this->expire_year = $expireYear;
+        $this->expireYear = $expireYear;
     }
 
     /**
@@ -154,7 +161,7 @@ class CreditCard extends AbstractModel
      */
     public function getFirstName()
     {
-        return $this->first_name;
+        return $this->firstName;
     }
 
     /**
@@ -162,7 +169,7 @@ class CreditCard extends AbstractModel
      */
     public function setFirstName($firstName)
     {
-        $this->first_name = $firstName;
+        $this->firstName = $firstName;
     }
 
     /**
@@ -186,7 +193,7 @@ class CreditCard extends AbstractModel
      */
     public function getLastName()
     {
-        return $this->last_name;
+        return $this->lastName;
     }
 
     /**
@@ -194,7 +201,7 @@ class CreditCard extends AbstractModel
      */
     public function setLastName($lastName)
     {
-        $this->last_name = $lastName;
+        $this->lastName = $lastName;
     }
 
     /**
@@ -218,7 +225,7 @@ class CreditCard extends AbstractModel
      */
     public function getPayerId()
     {
-        return $this->payer_id;
+        return $this->payerId;
     }
 
     /**
@@ -226,7 +233,7 @@ class CreditCard extends AbstractModel
      */
     public function setPayerId($payerId)
     {
-        $this->payer_id = $payerId;
+        $this->payerId = $payerId;
     }
 
     /**
@@ -250,7 +257,7 @@ class CreditCard extends AbstractModel
      */
     public function getValidUntil()
     {
-        return $this->valid_until;
+        return $this->validUntil;
     }
 
     /**
@@ -258,6 +265,6 @@ class CreditCard extends AbstractModel
      */
     public function setValidUntil($validUntil)
     {
-        $this->valid_until = $validUntil;
+        $this->validUntil = $validUntil;
     }
 }

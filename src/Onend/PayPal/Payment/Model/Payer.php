@@ -11,31 +11,34 @@ class Payer extends AbstractModel
 {
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("payment_method")
      *
      * @var string
      */
-    protected $payment_method;
+    protected $paymentMethod;
 
     /**
      * @JMS\Type("array<Onend\PayPal\Payment\Model\FundingInstrument>")
+     * @JMS\SerializedName("funding_instruments")
      *
      * @var FundingInstrument[]
      */
-    protected $funding_instruments;
+    protected $fundingInstruments;
 
     /**
      * @JMS\Type("Onend\PayPal\Payment\Model\PayerInfo")
+     * @JMS\SerializedName("payer_info")
      *
      * @var PayerInfo
      */
-    protected $payer_info;
+    protected $payerInfo;
 
     /**
      * @return FundingInstrument[]
      */
     public function getFundingInstruments()
     {
-        return $this->funding_instruments;
+        return $this->fundingInstruments;
     }
 
     /**
@@ -53,7 +56,7 @@ class Payer extends AbstractModel
      */
     public function addFundingInstrument(FundingInstrument $fundingInstrument)
     {
-        $this->funding_instruments[] = $fundingInstrument;
+        $this->fundingInstruments[] = $fundingInstrument;
     }
 
     /**
@@ -61,7 +64,7 @@ class Payer extends AbstractModel
      */
     public function getPaymentMethod()
     {
-        return $this->payment_method;
+        return $this->paymentMethod;
     }
 
     /**
@@ -71,7 +74,7 @@ class Payer extends AbstractModel
     public function setPaymentMethod($paymentMethod)
     {
         PaymentMethod::checkValue($paymentMethod);
-        $this->payment_method = $paymentMethod;
+        $this->paymentMethod = $paymentMethod;
     }
 
     /**
@@ -79,7 +82,7 @@ class Payer extends AbstractModel
      */
     public function getPayerInfo()
     {
-        return $this->payer_info;
+        return $this->payerInfo;
     }
 
     /**
@@ -87,6 +90,6 @@ class Payer extends AbstractModel
      */
     public function setPayerInfo(PayerInfo $payerInfo)
     {
-        $this->payer_info = $payerInfo;
+        $this->payerInfo = $payerInfo;
     }
 }
