@@ -87,7 +87,7 @@ class AuthResponse
     }
 
     /**
-     * @return array
+     * @return string[]
      */
     public function getScope()
     {
