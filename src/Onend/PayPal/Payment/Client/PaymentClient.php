@@ -21,7 +21,7 @@ class PaymentClient extends AbstractAuthenticatedClient
      */
     public function createPayment(Payment $payment)
     {
-        $request = $this->post(Endpoint::CREATE_PAYMENT, [], $payment->toJSON());
+        $request = $this->post(Endpoint::CREATE_PAYMENT, [], $this->getSerializer()->serialize($payment, RequestFormat::JSON));
         $response = $this->send($request);
 
         return $this->factoryPaymentResponse($response);
