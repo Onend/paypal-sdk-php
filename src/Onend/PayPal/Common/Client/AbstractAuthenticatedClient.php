@@ -2,14 +2,12 @@
 
 namespace Onend\PayPal\Common\Client;
 
-use Guzzle\Http\Client;
 use Guzzle\Http\Message\RequestInterface;
 
-use JMS\Serializer\SerializerBuilder;
 use Onend\PayPal\Common\Auth\AccessTokenInterface;
 use Onend\PayPal\Common\Auth\DefaultAccessTokenProvider;
 
-abstract class AbstractAuthenticatedClient extends Client
+abstract class AbstractAuthenticatedClient extends AbstractClient
 {
     /**
      * @var DefaultAccessTokenProvider
@@ -22,14 +20,6 @@ abstract class AbstractAuthenticatedClient extends Client
     public function setProvider(DefaultAccessTokenProvider $provider)
     {
         $this->provider = $provider;
-    }
-
-    /**
-     * @return \JMS\Serializer\Serializer
-     */
-    protected function getSerializer()
-    {
-        return SerializerBuilder::create()->build();
     }
 
     /**

@@ -2,26 +2,64 @@
 
 namespace Onend\PayPal\Common\Auth;
 
+use JMS\Serializer\Annotation as JMS;
+
 class AuthResponse
 {
-    protected $scope = []; // todo ez nem tömb így, tömbbé kell alakítani
-
-    protected $access_token;
-
-    protected $token_type;
-
-    protected $app_id;
-
-    protected $expires_in;
+    /**
+     * @JMS\Type("string")
+     * @JMS\Accessor(getter="getFlatScope",setter="setFlatScope")
+     *
+     * @var string[]
+     */
+    protected $scope = [];
 
     /**
-     * @param array $response
+     * @JMS\Type("string")
+     * @JMS\SerializedName("access_token")
+     *
+     * @var string
      */
-    public function __construct(array $response)
+    protected $accessToken;
+
+    /**
+     * @JMS\Type("string")
+     * @JMS\SerializedName("token_type")
+     *
+     * @var string
+     */
+    protected $tokenType;
+
+    /**
+     * @JMS\Type("string")
+     * @JMS\SerializedName("app_id")
+     *
+     * @var string
+     */
+    protected $appId;
+
+    /**
+     * @JMS\Type("string")
+     * @JMS\SerializedName("expires_in")
+     *
+     * @var int
+     */
+    protected $expiresIn;
+
+    /**
+     * @param string $scope
+     */
+    public function setFlatScope($scope)
     {
-        foreach ($response as $k => $v) {
-            $this->$k = $v;
-        }
+        $this->scope = explode(' ', (string)$scope);
+    }
+
+    /**
+     * @return string
+     */
+    public function getFlatScope()
+    {
+        return implode(' ', $this->scope);
     }
 
     /**
@@ -29,7 +67,7 @@ class AuthResponse
      */
     public function getAccessToken()
     {
-        return $this->access_token;
+        return $this->accessToken;
     }
 
     /**
@@ -37,7 +75,7 @@ class AuthResponse
      */
     public function getAppId()
     {
-        return $this->app_id;
+        return $this->appId;
     }
 
     /**
@@ -45,7 +83,7 @@ class AuthResponse
      */
     public function getExpiresIn()
     {
-        return $this->expires_in;
+        return $this->expiresIn;
     }
 
     /**
@@ -61,6 +99,6 @@ class AuthResponse
      */
     public function getTokenType()
     {
-        return $this->token_type;
+        return $this->tokenType;
     }
 }

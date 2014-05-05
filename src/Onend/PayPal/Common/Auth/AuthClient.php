@@ -2,10 +2,11 @@
 
 namespace Onend\PayPal\Common\Auth;
 
-use Guzzle\Http\Client;
+use Onend\PayPal\Common\Client\AbstractClient;
 use Onend\PayPal\Common\Enum\Endpoint;
+use Onend\PayPal\Common\Enum\RequestFormat;
 
-class AuthClient extends Client
+class AuthClient extends AbstractClient
 {
     /**
      * Request timeout
@@ -47,7 +48,10 @@ class AuthClient extends Client
         $response = parent::send($request);
 
         // todo retry if status code in self::$retryCode
-
-        return new AuthResponse(json_decode($response->getBody(true), true));
+        return $this->getSerializer()->deserialize(
+            $response->getBody(true),
+            'Onend\PayPal\Common\Auth\AuthResponse',
+            RequestFormat::JSON
+        );
     }
 }
