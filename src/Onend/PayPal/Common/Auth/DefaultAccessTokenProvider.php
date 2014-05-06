@@ -22,6 +22,14 @@ class DefaultAccessTokenProvider implements AccessTokenProviderInterface
     // todo suuggests package for cache
 
     /**
+     * @param AuthClient $authClient
+     */
+    public function __construct(AuthClient $authClient)
+    {
+        $this->authClient = $authClient;
+    }
+
+    /**
      * @param AccessTokenProviderInterface $provider
      */
     public function setProvider(AccessTokenProviderInterface $provider)
@@ -30,25 +38,19 @@ class DefaultAccessTokenProvider implements AccessTokenProviderInterface
     }
 
     /**
-     * @param AuthClient $authClient
-     */
-    public function setAuthClient(AuthClient $authClient)
-    {
-        $this->authClient = $authClient;
-    }
-
-    /**
      * @return AccessTokenInterface
      */
     public function getAccessToken()
     {
         if ($this->hasProvider()) {
-            if (($token = $this->provider->getAccessToken()) !== null) {
+            if (($token = $this->provider->getAccessToken()) === null) {
                 $token = $this->createNewAccessToken();
                 $this->provider->setAccessToken($token);
             }
+        } elseif ($this->accessToken !== null) {
+            $token = $this->accessToken;
         } else {
-            $token = $this->createNewAccessToken();
+            $this->accessToken = $token = $this->createNewAccessToken();
         }
 
         return $token;

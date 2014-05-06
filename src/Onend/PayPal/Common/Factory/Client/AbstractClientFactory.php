@@ -35,8 +35,7 @@ abstract class AbstractClientFactory implements ClientFactoryInterface
         $this->credentials = $credentials;
         $authClient = new AuthClient($baseUrl);
         $authClient->setCredentials($credentials);
-        $this->accessTokenProvider = new DefaultAccessTokenProvider();
-        $this->accessTokenProvider->setAuthClient($authClient);
+        $this->accessTokenProvider = new DefaultAccessTokenProvider($authClient);
     }
 
     /**
