@@ -15,7 +15,9 @@ class CreditCardPaymentClientTest extends AbstractPaymentClientTest
 {
     public function testExecutePayment()
     {
-        //$this->assertInstanceOf( Payment::getClass(), $this->client->executePayment( $this->payment ) );
+        $this->markTestIncomplete();
+
+        $this->assertInstanceOf( Payment::getClass(), $this->client->executePayment( $this->payment ) );
     }
 
     /**

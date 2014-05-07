@@ -1,6 +1,6 @@
 <?php
 
-namespace Onend\Tests\PayPal\Common\Credentials;
+namespace Onend\Tests\PayPal\Common\Auth;
 
 use Onend\PayPal\Common\Auth\Credentials;
 

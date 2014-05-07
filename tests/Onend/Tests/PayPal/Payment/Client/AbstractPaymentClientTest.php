@@ -12,7 +12,7 @@ use Onend\PayPal\Payment\Model\AmountDetails;
 use Onend\PayPal\Payment\Model\Payer;
 use Onend\PayPal\Payment\Model\Payment;
 use Onend\PayPal\Payment\Model\Transaction;
-use Onend\Tests\PayPal\Common\Credentials\CredentialsTest;
+use Onend\Tests\PayPal\Common\Auth\CredentialsTest;
 
 abstract class AbstractPaymentClientTest extends GuzzleTestCase
 {
