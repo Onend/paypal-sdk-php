@@ -1,5 +1,5 @@
 before_commands:
-    - "composer install --prefer-source"
+    - 'composer install --prefer-source'
 
 tools:
     php_mess_detector:
@@ -9,6 +9,7 @@ tools:
             unused_code_rules: { unused_local_variable: true, unused_private_method: true, unused_formal_parameter: true }
             naming_rules: { short_variable: true, long_variable: true, short_method: true, boolean_method_name: true }
             controversial_rules: { camel_case_class_name: true, camel_case_method_name: true, camel_case_parameter_name: true, camel_case_variable_name: true }
+
     php_analyzer:
         config:
             parameter_reference_check: { enabled: false }
@@ -39,11 +40,19 @@ tools:
             doc_comment_fixes: { enabled: false }
             reflection_fixes: { enabled: false }
             use_statement_fixes: { enabled: true, remove_unused: true, preserve_multiple: false, preserve_blanklines: true, order_alphabetically: false }
+
     php_code_sniffer:
         config:
             tab_width: '4'
             standard: PSR2
+            sniffs: { psr1: { classes: { class_declaration_sniff: true } }, generic: { code_analysis: { unused_function_parameter_sniff: true, unconditional_if_statement_sniff: true, for_loop_should_be_while_loop_sniff: true }, white_space: { disallow_tab_indent_sniff: true, scope_indent_sniff: true }, php: { disallow_short_open_tag_sniff: true, sapi_usage_sniff: true, forbidden_functions_sniff: true, lower_case_constant_sniff: true, lower_case_keyword_sniff: true }, formatting: { multiple_statement_alignment_sniff: true, space_after_cast_sniff: true, disallow_multiple_statements_sniff: true }, functions: { function_call_argument_spacing_sniff: true }, files: { one_interface_per_file_sniff: true, end_file_newline_sniff: true, one_class_per_file_sniff: true, line_endings_sniff: true }, commenting: { todo_sniff: true }, control_structures: { inline_control_structure_sniff: true }, naming_conventions: { camel_caps_function_name_sniff: true, constructor_name_sniff: true, upper_case_constant_name_sniff: true }, metrics: { cyclomatic_complexity_sniff: true, nesting_level_sniff: true } }, zend: { files: { closing_tag_sniff: true } } }
+
     php_code_coverage: true
+
     php_loc: true
+
+    php_pdepend: true
+
     php_sim: true
+
     php_changetracking: true
