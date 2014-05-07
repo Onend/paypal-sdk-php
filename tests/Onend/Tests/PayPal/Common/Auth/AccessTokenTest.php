@@ -19,6 +19,6 @@ class AccessTokenTest extends \PHPUnit_Framework_TestCase
     {
         $token = new AccessToken();
         $id = $token->getRequestId();
-        $this->assertSame( $id, $token->getRequestId() );
+        $this->assertSame($id, $token->getRequestId());
     }
 }

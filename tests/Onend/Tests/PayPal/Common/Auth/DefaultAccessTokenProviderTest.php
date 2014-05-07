@@ -29,7 +29,7 @@ class DefaultAccessTokenProviderTest extends \PHPUnit_Framework_TestCase
     public function testGetAccessTokenWithoutProvider()
     {
         $provider = $this->getProvider();
-        $this->assertEquals( 0, $this->authCalledTimes );
+        $this->assertEquals(0, $this->authCalledTimes);
         $accessToken = $provider->getAccessToken();
         $this->assertEquals(1, $this->authCalledTimes);
 
@@ -89,12 +89,15 @@ class DefaultAccessTokenProviderTest extends \PHPUnit_Framework_TestCase
         $client
             ->expects($this->any())
             ->method("auth")
-            ->will($this->returnCallback(function () {
-                $this->authCalledTimes++;
+            ->will(
+                $this->returnCallback(
+                    function () {
+                        $this->authCalledTimes++;
 
-                return $this->getAuthResponse();
-            }))
-        ;
+                        return $this->getAuthResponse();
+                    }
+                )
+            );
 
         return $client;
     }
@@ -113,7 +116,7 @@ class DefaultAccessTokenProviderTest extends \PHPUnit_Framework_TestCase
 
     protected function getRawAuthResponse()
     {
-        return '{"scope":"openid https://uri.paypal.com/services/invoicing https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card/.* https://api.paypal.com/v1/vault/credit-card","access_token":"G4uMR37aK-YAfx32vsRq2baY9MxgsCrw6W.HYDbkx7E","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}';
+        return file_get_contents(__DIR__ . "/fixtures/authresponse.json");
     }
 
     /**
@@ -129,16 +132,13 @@ class DefaultAccessTokenProviderTest extends \PHPUnit_Framework_TestCase
         $userProvider
             ->expects($this->once())
             ->method("getAccessToken")
-            ->will($this->returnValue(null))
-        ;
+            ->will($this->returnValue(null));
     }
 
     protected function expectSetterCalledOnce(\PHPUnit_Framework_MockObject_MockObject $userProvider)
     {
         $userProvider
             ->expects($this->once())
-            ->method("setAccessToken")
-        ;
+            ->method("setAccessToken");
     }
-
 }
