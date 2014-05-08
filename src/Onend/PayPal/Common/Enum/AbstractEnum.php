@@ -33,7 +33,7 @@ abstract class AbstractEnum
     }
 
     /**
-     * @param $value
+     * @param string $value
      *
      * @return bool
      */

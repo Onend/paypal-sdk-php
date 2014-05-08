@@ -152,7 +152,7 @@ class Payment extends AbstractModel
     }
 
     /**
-     * @param array $transactions
+     * @param Transaction[] $transactions
      */
     public function setTransactions(array $transactions)
     {
