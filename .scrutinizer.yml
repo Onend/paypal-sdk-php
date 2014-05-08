@@ -58,4 +58,4 @@ tools:
     php_changetracking: true
 
 filter:
-    paths: [src]
+    paths: [src/*]
