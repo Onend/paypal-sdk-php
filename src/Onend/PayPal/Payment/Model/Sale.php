@@ -31,10 +31,11 @@ class Sale extends AbstractRelatedResource
 
     /**
      * @JMS\Type("string")
+     * @JMS\SerializedName("state")
      *
      * @var string
      */
-    protected $state;
+    protected $status;
 
     /**
      * @JMS\Type("Onend\PayPal\Payment\Model\Amount")
@@ -141,17 +142,17 @@ class Sale extends AbstractRelatedResource
     /**
      * @param string $state
      */
-    public function setState($state)
+    public function setStatus($state)
     {
-        $this->state = $state;
+        $this->status = $state;
     }
 
     /**
      * @return string
      */
-    public function getState()
+    public function getStatus()
     {
-        return $this->state;
+        return $this->status;
     }
 
     /**
