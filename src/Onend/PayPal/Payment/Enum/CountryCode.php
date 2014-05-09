@@ -231,4 +231,4 @@ class CountryCode extends AbstractEnum
     const WESTERN_SAHARA = "EH";
     const YEMEN = "YE";
     const ZAMBIA = "ZM";
-} 
+}

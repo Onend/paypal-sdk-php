@@ -8,4 +8,4 @@ class CreditCardState extends AbstractEnum
 {
     const EXPIRED = "expired";
     const OK = "ok";
-} 
+}

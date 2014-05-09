@@ -10,4 +10,4 @@ class CreditCardType extends AbstractEnum
     const MASTERCARD = "mastercard";
     const DISCOVER = "discover";
     const AMEX = "amex";
-} 
+}
