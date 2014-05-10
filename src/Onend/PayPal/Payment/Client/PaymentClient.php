@@ -50,13 +50,13 @@ class PaymentClient extends AbstractAuthenticatedClient
     /**
      * Look up a payment resource
      *
-     * @param Payment $payment
+     * @param string $paymentId
      *
      * @return Payment
      */
-    public function lookupPayment(Payment $payment)
+    public function lookupPayment($paymentId)
     {
-        $request = $this->get(Endpoint::LOOKUP_PAYMENT, null, ["paymenId" => $payment->getId()]);
+        $request = $this->get(Endpoint::LOOKUP_PAYMENT, null, ["paymenId" => $paymentId]);
         $response = $this->send($request);
 
         return $this->factoryPaymentResponse($response);

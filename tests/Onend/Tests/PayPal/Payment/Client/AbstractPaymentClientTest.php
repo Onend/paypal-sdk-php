@@ -40,7 +40,7 @@ abstract class AbstractPaymentClientTest extends GuzzleTestCase
 
     public function testLookupPayment()
     {
-        $this->assertInstanceOf(Payment::getClass(), $this->client->lookupPayment($this->payment));
+        $this->assertInstanceOf(Payment::getClass(), $this->client->lookupPayment($this->payment->getId()));
     }
 
     /**
