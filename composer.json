@@ -3,9 +3,8 @@
     "type": "library",
     "description": "PayPal REST API PHP client",
     "keywords": ["rest", "paypal", "php", "client"],
-    "homepage": "http://1nd.hu/",
+    "homepage": "http://onend.github.io/paypal-sdk-php/",
     "license": "MIT",
-    "version": "0.5.0",
 
     "authors": [
         {
