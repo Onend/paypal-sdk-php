@@ -32,7 +32,7 @@ class PaymentClient extends AbstractAuthenticatedClient
     }
 
     /**
-     * Execute an approved PayPal payment
+     * Execute an approved PayPal payment by Payment
      *
      * @param Payment $payment
      *
@@ -40,8 +40,21 @@ class PaymentClient extends AbstractAuthenticatedClient
      */
     public function executePayment(Payment $payment)
     {
-        $data = json_encode(["payer_id" => $payment->getPayer()->getPayerInfo()->getPayerId()]);
-        $request = $this->post(Endpoint::EXECUTE_PAYMENT, null, $data, ["paymenId" => $payment->getId()]);
+        return $this->executePaymentByIds($payment->getPayer()->getPayerInfo()->getPayerId(), $payment->getId());
+    }
+
+    /**
+     * Execute an approved PayPal payment by payerId and paymentId
+     *
+     * @param string $payerId
+     * @param string $paymentId
+     *
+     * @return Payment
+     */
+    public function executePaymentByIds($payerId, $paymentId)
+    {
+        $data = json_encode(["payer_id" => $payerId]);
+        $request = $this->post(Endpoint::EXECUTE_PAYMENT, null, $data, ["paymenId" => $paymentId]);
         $response = $this->send($request);
 
         return $this->factoryPaymentResponse($response);
