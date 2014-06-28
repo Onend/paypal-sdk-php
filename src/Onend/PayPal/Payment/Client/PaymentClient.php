@@ -40,18 +40,18 @@ class PaymentClient extends AbstractAuthenticatedClient
      */
     public function executePayment(Payment $payment)
     {
-        return $this->executePaymentByIds($payment->getPayer()->getPayerInfo()->getPayerId(), $payment->getId());
+        return $this->executePaymentByIds($payment->getId(), $payment->getPayer()->getPayerInfo()->getPayerId());
     }
 
     /**
      * Execute an approved PayPal payment by payerId and paymentId
      *
-     * @param string $payerId
      * @param string $paymentId
+     * @param string $payerId
      *
      * @return Payment
      */
-    public function executePaymentByIds($payerId, $paymentId)
+    public function executePaymentByIds($paymentId, $payerId)
     {
         $data = json_encode(["payer_id" => $payerId]);
         $request = $this->post(Endpoint::EXECUTE_PAYMENT, null, $data, ["paymenId" => $paymentId]);
