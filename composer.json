@@ -14,8 +14,8 @@
         },
         {
             "name": "Martin Miklós",
-            "email": "martin.miklos@1nd.hu",
-            "homepage": "https://github.com/miklos-martin"
+            "email": "miklos.martin@gmail.com",
+            "homepage": "http://miklos-martin.github.io"
         }
     ],
 
@@ -23,17 +23,22 @@
         "php": ">=5.4",
         "ext-curl": "*",
         "guzzle/guzzle": "~3.7",
-        "jms/serializer": "0.16.0"
+        "jms/serializer": "~0.16"
     },
 
     "require-dev": {
-        "phpunit/phpunit": "4.0.*"
+        "phpunit/phpunit": "~4.6"
     },
 
     "autoload": {
         "psr-0": {
-            "Onend": "src/",
-            "Onend\\Tests": "tests/"
+            "Onend": "src/"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-0": {
+            "Onend\\Test": "tests/"
         }
     }
 }
